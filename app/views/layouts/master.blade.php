@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> programmerPrep </title>
+        <title>programmerPrep</title>
         <!-- normalize CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
         <!-- skeleton CDN -->
@@ -17,6 +17,7 @@
         <main class="container">
             @yield('content')
         </main>
+
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         @yield('bottom-script')
