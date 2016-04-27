@@ -19,10 +19,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
-	public function showLoginPage()
-	{
-		return View::make('login');
-	}
+	// public function showLoginPage()
+	// {
+	// 	return View::make('login');
+	// }
 	public function showStatusPage()
 	{
 		return View::make('dashboard');
