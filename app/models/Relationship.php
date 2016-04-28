@@ -6,7 +6,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
 
-class Post extends Eloquent
+class Relationship extends Eloquent
 {
-    protected $table = 'posts';
+    protected $table = 'relationships';
 }

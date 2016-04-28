@@ -18,6 +18,7 @@ class CreateRelationshipsTable extends Migration {
             $table->integer('mentor_id')->unsigned();
             $table->integer('student_id')->unsigned();
             $table->boolean('is_pending');
+            $table->timestamps();
 			$table->foreign('mentor_id')->references('id')->on('users');
 			$table->foreign('student_id')->references('id')->on('users');
         });
