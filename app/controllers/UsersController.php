@@ -29,7 +29,7 @@ class UsersController extends \BaseController {
 		} else {
 			Session::Flash('errorMessage', 'Login Failed!!!');
 		}
-		return Redirect::make('login');
+		return View::make('login');
 	}
 
 	public function doLogin(){
@@ -63,7 +63,7 @@ class UsersController extends \BaseController {
 			return View::make('login');
 		}
 
-		return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship))
+		return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship));
 	}
 
 	public function create(){
@@ -73,7 +73,7 @@ class UsersController extends \BaseController {
 			['password',          'Password'],
 			['ver_password',      'Confirm Password'],
 			['email',             'Email'],
-			['username',          'Username']
+			['username',          'Username'],
 			['confirmation_code', $confirmation_code]
 		];
 		return View::make('user.create',['login_info' => $login_info]);
