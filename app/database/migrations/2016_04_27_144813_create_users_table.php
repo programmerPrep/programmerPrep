@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration {
             $table->string('address')->nullable();
             $table->string('github_name');
             $table->timestamps();
+            $table->string('confirmation_code')->nullable();
+            $table->boolean('confirmed')->default(0);
         });
 	}
 
