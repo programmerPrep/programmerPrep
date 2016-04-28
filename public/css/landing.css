@@ -4,6 +4,9 @@ html{
 *:focus {
     outline: none !important;
 }
+span {
+	color: green;
+}
 #landingBody{
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
@@ -20,31 +23,37 @@ html{
 	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
-	border: solid black 2px;
+	border: solid black 10px;
+	max-width: 99%;
 }
 
 .title{
 	margin-top: 10px;
-	font-size: 5rem;
+	font-size: 6rem;
 	font-weight: bold;
+}
+
+.definition{
+	font-size: 1.6rem;
 }
 
 .invisible{
 	display: none;   
 }
 
-legend{
+/*legend{
 	border: solid black 2px;
 	float: left;
 	padding-left: 1%;
 }
-
+*/
 form input[type=text], input[type=email], input[type=password]{
 	width: 64%;
 	text-align: center;
 	border: none;
 	border-bottom: solid black 3px;
 	outline: none;
+	margin-bottom: 10px;
 }
 
 .registration {
@@ -57,11 +66,6 @@ form input[type=text], input[type=email], input[type=password]{
 #loginButton{
 	margin-left: 20%;
 }
-/*.registerButton, .loginButton {
-	margin: 10%;
-}
-*/
-
 
 
 
