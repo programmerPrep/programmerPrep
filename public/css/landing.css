@@ -1,6 +1,11 @@
+html{
+	height: 100%;
+}
+*:focus {
+    outline: none !important;
+}
 #landingBody{
   	background-image: url('../img/notebookBackground.jpeg');
-	height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -12,13 +17,14 @@
 .whiteBox{
 	background-color: white;
 	border-radius: 22px;
+	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
 	border: solid black 2px;
 }
 
 .title{
-	margin-top: 20px;
+	margin-top: 10px;
 	font-size: 5rem;
 	font-weight: bold;
 }
@@ -34,9 +40,32 @@ legend{
 }
 
 form input[type=text], input[type=email], input[type=password]{
-	width: 70%;
+	width: 64%;
 	text-align: center;
 	border: none;
 	border-bottom: solid black 3px;
 	outline: none;
 }
+
+.registration {
+	display: none;
+}
+
+.loginFormButtons {
+
+}
+#loginButton{
+	margin-left: 20%;
+}
+/*.registerButton, .loginButton {
+	margin: 10%;
+}
+*/
+
+
+
+
+
+
+
+
