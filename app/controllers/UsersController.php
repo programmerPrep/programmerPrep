@@ -60,7 +60,8 @@ class UsersController extends \BaseController {
 
 		if (!$user){
 			Session::flash('The user does not exist');
-			return View::make('login')
+			return View::make('login');
+		}
 
 		return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship))
 	}
