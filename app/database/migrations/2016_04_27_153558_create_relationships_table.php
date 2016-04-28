@@ -30,7 +30,7 @@ class CreateRelationshipsTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('relationships');
 	}
 
 }
