@@ -15,10 +15,11 @@ class CreateUsersTable extends Migration {
 		Schema::create('users', function($table)
         {
             $table->increments('id');
-            $table->string('email', 100);
+            $table->string('email');
+            $table->string('username', 15);
             $table->string('password', 20);
             $table->string('first_name', 25);
-            $table->string('last_name', 25);
+            $table->string('last_name', 25)->nullable();
             $table->boolean('is_mentor');
             $table->text('bio');
             $table->string('img_url');
