@@ -50,6 +50,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'username' => 'required',
 		'password' => 'required',
 		);
+
+	public static $loginRegistrationRules = array(
+		'username' => 'required|max:15',
+		'password' => 'required',
+		'email'	   => 'email',
+	);
 	public function setPasswordAttribute($value)
 	{
 		$this->attributes['password'] = Hash::make($value);
