@@ -37,7 +37,6 @@ class UsersController extends \BaseController {
 
 		if ($validator->fails()){
 			return Redirect::back()->withInput()->withErrors($validator);
-			return Redirect::action('HomeController@showStatusPage');
 		}
 
 		if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))){
