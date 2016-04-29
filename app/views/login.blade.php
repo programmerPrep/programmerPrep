@@ -39,7 +39,7 @@
 		    	$(".registration").slideToggle("invisible");
 					// Toggle Register/Un-Register
 		    		$(this).text(function(i,v) {
-		        		return v === 'Oops' ? 'Register' : 'Oops'
+		        		return v === '  Back  ' ? 'Register' : '  Back  '
 		    		});
 			});
 	</script>

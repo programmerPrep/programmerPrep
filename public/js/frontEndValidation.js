@@ -19,8 +19,14 @@ $().ready(function(){
             }
         },
         messages: {
-            username: "<br><font color=red>This field is required</font>",
-            password: "<br><font color=red>This field is required</font>",
+            username:{
+                required: "<br><font color=red>This field is required</font>",
+                maxlength: "<br><font color=red>Max length is 15 characters</font>"
+            }, 
+            password: {
+                required: "<br><font color=red>This field is required</font>",
+                maxlength:"<br><font color=red>Max length is 20 characters</font>",
+            },
             confirmPassword: "<br><font color=red>Please enter the same value again</font",
             email: "<br><font color=red>This field is required</font>"
         }
