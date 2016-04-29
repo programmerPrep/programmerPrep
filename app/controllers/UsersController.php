@@ -33,15 +33,16 @@ class UsersController extends \BaseController {
 	}
 
 	public function doLogin(){
-		$validator = Validator::make(Input::all(), User::$loginRules);
+		$validator = Validator::make(Input::all(), User::$rules);
 
 		if ($validator->fails()){
-			return Redirect::back()->withInput()->withErrors($validator);
+			// return Redirect::back()->withInput()->withErrors($validator);
+			return Redirect::action('HomeController@showStatusPage');
 		}
 
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))){
 			Session::flash('successMessage' , 'Logged in!');
-			return Redirect::action('HomeController@dashboard');
+			return Redirect::action('HomeController@showStatusPage');
 		} else {
 			Session::flash('errorMessage', 'Your email or password was not correct');
 			return Redirect::back()->withInput();
