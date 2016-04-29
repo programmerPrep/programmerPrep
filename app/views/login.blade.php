@@ -1,16 +1,9 @@
 @extends('layouts.master')
 	@section('content')
 
-    {{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
+    
 
-		<body id="landingBody">
-			<div class="container"> 
-				<div class="whiteBox">			
-					<div class="title"> programmerPrep</div>
-					<p class="definition"> Connecting aspiring Jr. Developers to Mentors in the industry</p>
-
-
-<body id="landingBody">
+	<body id="landingBody">
 	<div class="container"> 
 		<div class="whiteBox">			
 			<div class="title"> programmerPrep </div>
@@ -20,19 +13,24 @@
 
 			<!-- login -->
 <!-- 			<form method="POST" id="signupForm">
- -->			<div class="loginField">
+ -->			{{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
+
+ 				<div class="loginField">
 <!-- 				<input id="username" name="username" type="text" Placeholder="username"><br>
  -->                {{ Form::text('username', null, array('class' => 'form-control', 'placeholder' => 'Username')) }}
 <!--         		<input id="password" name="password" type="password" placeholder="password"></br>
  -->                {{ Form::password('password', array('placeholder' => 'Password', 'class' => 'form-control')) }}
         		<div class="registration ">
-		    		<!-- <input id="confirmPassword" name="confirmPassword" type="password" placeholder="confirmPassword"></br>
-          			<input id="email" name="email" type="email" placeholder="emailAddress">
- -->          		</div>
+		    		{{-- <input id="confirmPassword" name="confirmPassword" type="password" placeholder="confirmPassword"> --}}
+		    		{{ Form::password('confirmPassword', array('placeholder' => 'Confirm password', 'class' => 'form-control')) }}
+		    		</br>
+          			{{-- <input id="email" name="email" type="email" placeholder="emailAddress"> --}}
+          			{{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Email')) }}
+          		</div>
           		<div class="loginFormButtons">
-        		<!-- 	<button type="button" id="registerButton" class="loginFormButton">Register</button>
-        			<button type="submit" id="loginButton" class="loginFormButton">Login</button>
- -->                    {{ Form::submit('Sign in', array('class' => 'btn-log')); }}
+        			<button type="button" id="registerButton" class="loginFormButton">Register</button>
+        			{{-- <button type="submit" id="loginButton" class="loginFormButton">Login</button> --}}
+                    {{ Form::submit('Sign in', array('class' => 'btn-log')); }}
       			</div>
 <!--           	</form>
  -->            {{ Form::close() }}         
@@ -42,20 +40,11 @@
     	$(".registration").slideToggle("invisible");
 			// Toggle Register/Un-Register
     		$(this).text(function(i,v) {
-        		return v === 'Oops' ? 'Register' : 'Oops'
+        		return v === 'Un-Register' ? 'Register' : 'Un-Register'
     		});
 	});
 	</script>
 
-		<script>
-		// Toggle Register/Un-Register
-		$("#registerButton").click(function() {
-			$(".registration").slideToggle("invisible");
-				$(this).text(function(i,v) {
-		    		return v === '  Back  ' ? 'Register' : '  Back  '
-				});
-		});
-		</script>
 
 @stop
 
