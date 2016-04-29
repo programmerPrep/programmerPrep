@@ -15,8 +15,8 @@ class CreateUsersTable extends Migration {
 		Schema::create('users', function($table)
         {
             $table->increments('id');
-            $table->string('email');
-            $table->string('username', 15);
+            $table->string('email')->unique();
+            $table->string('username', 15)->unique();
             $table->string('password');
             $table->string('first_name', 25)->nullable();
             $table->string('last_name', 25)->nullable();
@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration {
             $table->text('bio')->nullable();
             $table->string('img_url')->nullable();
             $table->string('address')->nullable();
-            $table->string('github_name')->nullable();
+            $table->string('github_name')->unique()->nullable();
             $table->timestamps();
             $table->string('confirmation_code')->nullable();
             $table->boolean('confirmed')->default(0);
