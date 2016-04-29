@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>programmerPrep</title>
-</head>
-
 @extends('layouts.master')
 	@section('content')
+
     {{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
 
-
+		<body id="landingBody">
+			<div class="container"> 
+				<div class="whiteBox">			
+					<div class="title"> programmerPrep</div>
+					<p class="definition"> Connecting aspiring Jr. Developers to Mentors in the industry</p>
 
 
 <body id="landingBody">
@@ -47,5 +46,16 @@
     		});
 	});
 	</script>
+
+		<script>
+		// Toggle Register/Un-Register
+		$("#registerButton").click(function() {
+			$(".registration").slideToggle("invisible");
+				$(this).text(function(i,v) {
+		    		return v === '  Back  ' ? 'Register' : '  Back  '
+				});
+		});
+		</script>
+
 @stop
 

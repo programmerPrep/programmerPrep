@@ -4,6 +4,9 @@ html{
 *:focus {
     outline: none !important;
 }
+span {
+	color: green;
+}
 #landingBody{
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
@@ -14,37 +17,50 @@ html{
     font-size: 1.5rem;
 }
 
+button {
+	border: solid black 2px;
+}
+
 .whiteBox{
 	background-color: white;
 	border-radius: 22px;
 	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
-	border: solid black 2px;
+	border: solid black 10px;
+	max-width: 99%;
 }
 
 .title{
-	margin-top: 10px;
-	font-size: 5rem;
+	font-size: 6rem;
 	font-weight: bold;
+
+}
+
+.definition{
+	font-size: 1.6rem;
 }
 
 .invisible{
 	display: none;   
 }
 
-legend{
+/*legend{
 	border: solid black 2px;
 	float: left;
 	padding-left: 1%;
 }
-
+*/
 form input[type=text], input[type=email], input[type=password]{
 	width: 64%;
 	text-align: center;
 	border: none;
 	border-bottom: solid black 3px;
+	border-left: solid white 3px;
+	border-right: solid white 3px;
+	border-top: solid white 3px;
 	outline: none;
+	margin-bottom: 10px;
 }
 
 .registration {
@@ -52,20 +68,27 @@ form input[type=text], input[type=email], input[type=password]{
 }
 
 .loginFormButtons {
-
+	margin-bottom: -15px;
 }
 #loginButton{
 	margin-left: 20%;
 }
-/*.registerButton, .loginButton {
-	margin: 10%;
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-bottom: 3px solid black;
+  outline: 0; 
 }
-*/
-
-
-
-
-
 
 
 
