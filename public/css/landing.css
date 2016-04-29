@@ -7,6 +7,9 @@ html{
 span {
 	color: green;
 }
+legend{
+	margin-bottom: -13px;
+}
 #landingBody{
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
@@ -39,6 +42,8 @@ button {
 
 .definition{
 	font-size: 1.6rem;
+	/*border: solid black 2px;*/
+	/*margin-bottom: 1px;*/
 }
 
 .invisible{
@@ -68,7 +73,7 @@ form input[type=text], input[type=email], input[type=password]{
 }
 
 .loginFormButtons {
-	margin-bottom: -15px;
+	margin-bottom: -16px;
 }
 #loginButton{
 	margin-left: 20%;
@@ -89,11 +94,3 @@ select:focus {
   border-bottom: 3px solid black;
   outline: 0; 
 }
-
-.spine{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-	overflow: hidden;
-}
-
