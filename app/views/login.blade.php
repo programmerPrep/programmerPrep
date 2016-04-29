@@ -1,17 +1,14 @@
 @extends('layouts.master')
-	@section('content')
-
-    
-
-	<body id="landingBody">
+@section('content')
+<body id="landingBody">
 	<div class="container"> 
 		<div class="whiteBox">			
+			<legend> img_AU </legend>
 			<div class="title"> programmerPrep </div>
-			<p class="definition"> 
-				Connecting aspiring Jr. Developers to Mentors in the industry
-			</p>
+			<p class="definition">Connecting aspiring Jr. Developers to Mentors in the industry</p>
 
 			<!-- login -->
+<<<<<<< HEAD
 <!-- 			<form method="POST" id="signupForm">
  -->			{{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
 
@@ -38,13 +35,16 @@
 	<script>
 	$("#registerButton").click(function() {
     	$(".registration").slideToggle("invisible");
+
 			// Toggle Register/Un-Register
-    		$(this).text(function(i,v) {
-        		return v === 'Un-Register' ? 'Register' : 'Un-Register'
-    		});
-	});
+			$(this).text(function(i,v) {
+				return v === 'Un-Register' ? 'Register' : 'Un-Register'
+			});
+		});
 	</script>
+	@stop
 
 
-@stop
+
+
 
