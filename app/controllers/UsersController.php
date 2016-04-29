@@ -11,32 +11,16 @@ class UsersController extends \BaseController {
 	    $this->beforeFilter('edit_user', array('except' => array('doLogin', 'showLogin', 'showlogout', 'create',     'store',  'update')));
 	}
 
-	public function showLogin(){
-		$email = Input::get('username');
-		$password = Input::get('password');
-
-		if (Auth::attempt(array('email' => $email, 'password' => $password), true)) {
-			if (Auth::user()->confirmed == 0) 
-			{
-				Auth::logout();
-				Session::Flash('errorMessage', 'You have to confirm your account by clicking on the confirmation code in your email.');
-			} else {
-			$user = Auth::user()->id;
-			$user = User::find($user);
-			$relationship = Relationship::where('user_id', '=', $user->id)->get();
-			return View::action('HomeController@showStatusPage');
-			}
-		} else {
-			Session::Flash('errorMessage', 'Login Failed!!!');
-		}
+	public function showLogin()
+    {
 		return View::make('login');
 	}
 
 	public function checkLogin(){
 		if (Input::has('username') && Input::has('password') && Input::has('email')){
-			create();
+			$this->create();
 		} else {
-			doLogin();
+			$this->doLogin();
 		}
 	}
 
