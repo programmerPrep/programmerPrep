@@ -45,6 +45,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'github_name' => 'required',
 		'bio'         => 'required',
 		'img_url'	  => 'required',
+	);
+	public static $loginRules = array(
+		'username' => 'required',
+		'password' => 'required',
 		);
 	public function setPasswordAttribute($value)
 	{
