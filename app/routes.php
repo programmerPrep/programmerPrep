@@ -26,7 +26,7 @@ Route::post('/login', 'UsersController@doLogin');
 Route::get('/logout', 'UsersController@showlogout');
 
 
-Route::get('/dashboard', 'HomeController@showStatus');
+Route::get('/dashboard', 'HomeController@showStatusPage');
 
 Route::resource('/users','UsersController');
 
