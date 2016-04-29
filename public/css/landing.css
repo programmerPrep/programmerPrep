@@ -1,5 +1,8 @@
 html{
 	height: 100%;
+  	background-image: url('../img/notebookBackground.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 *:focus {
     outline: none !important;
@@ -11,9 +14,9 @@ legend{
 	margin-bottom: -13px;
 }
 #landingBody{
-  	background-image: url('../img/notebookBackground.jpeg');
+/*  	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     background-position: center;
   	font-family: 'Copperplate Gothic Bold', sans-serif;
   	text-align: center;
