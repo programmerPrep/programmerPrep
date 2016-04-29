@@ -1,5 +1,5 @@
 html{
-	height: 100%;
+	height: 100vh;
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@ button {
 }
 
 .title{
-	font-size: 6rem;
+	font-size: 6vw;
 	font-weight: bold;
 
 }
@@ -78,9 +78,18 @@ form input[type=text], input[type=email], input[type=password]{
 .loginFormButtons {
 	margin-bottom: -16px;
 }
-#loginButton{
-	margin-left: 20%;
+
+#registerButton:active, #loginButton:active {
+	border: solid red 2px;
+	
 }
+
+/*#registerButton{
+	margin-right: 10%;
+}
+#loginButton{
+	margin-left: 10%;
+}*/
 
 input[type="email"]:focus,
 input[type="number"]:focus,

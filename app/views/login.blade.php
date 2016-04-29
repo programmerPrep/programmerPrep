@@ -5,7 +5,15 @@
 
 				<div class="whiteBox">			
 					<legend> img_AU </legend>
+
+
+
+
+
+
 					<div class="title"> programmerPrep</div>
+					
+
 					<p class="definition"> Connecting aspiring Jr. Developers to Mentors in the industry</p>
 					<!-- login -->
 					<form method="POST" id="signupForm">
