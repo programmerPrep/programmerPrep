@@ -2,10 +2,11 @@
 	@section('content')
 		<body id="landingBody">
 			<div class="container"> 
+
 				<div class="whiteBox">			
+					<legend> img_AU </legend>
 					<div class="title"> programmerPrep</div>
 					<p class="definition"> Connecting aspiring Jr. Developers to Mentors in the industry</p>
-
 					<!-- login -->
 					<form method="POST" id="signupForm">
 						<input id="username" name="username" type="text" Placeholder="username"><br>
@@ -21,7 +22,6 @@
 		          	</form>         
 		        </div>
 			</div>
-
 		</body>
 		          	 <!-- you need to add the spine (absolute 0 0 )  -->
 
@@ -35,4 +35,8 @@
 		});
 		</script>
 @stop
+
+
+
+
 

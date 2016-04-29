@@ -90,5 +90,10 @@ select:focus {
   outline: 0; 
 }
 
-
+.spine{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	overflow: hidden;
+}
 
