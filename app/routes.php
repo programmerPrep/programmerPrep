@@ -17,11 +17,13 @@
 
 Route::get('/', 'UsersController@showLogin');
 
-Route::post('/', 'UsersController@doLogin');
+Route::post('/checklogin', 'UsersController@checkLogin');
 
-Route::get('/dashboard', 'HomeController@showStatus');
+Route::post('/login', 'UsersController@doLogin');
 
 Route::get('/logout', 'UsersController@showlogout');
+
+Route::get('/dashboard', 'HomeController@showStatus');
 
 Route::resource('/users','UsersController');
 
@@ -30,3 +32,8 @@ Route::get('/{username}/edit','UsersController@edit');
 Route::get('/about', 'HomeController');
 
 Route::get('/test', 'HomeController@showWelcome');
+
+Route::get('register/verify/{confirmationCode}', [
+    'as' => 'confirmation_path',
+    'uses' => 'UsersController@confirm'
+]);
