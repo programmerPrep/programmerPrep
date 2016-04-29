@@ -16,15 +16,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
         <!-- frontEndValidation -->
         <script src="js/frontEndValidation.js"></script>
-
         @yield('top-script')
     </head>
     <body>
  
         <main class="container">
             @yield('content')
-        </main>
-
-        
+        </main>      
     </body>
 </html>

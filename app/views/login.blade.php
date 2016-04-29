@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>programmerPrep</title>
-</head>
-
 @extends('layouts.master')
 	@section('content')
 		<body id="landingBody">
@@ -25,18 +19,20 @@
 		        			<button type="submit" id="loginButton" class="loginFormButton">Login</button>
 		      			</div>
 		          	</form>         
-		          	</div>
+		        </div>
+			</div>
 
+		</body>
 		          	 <!-- you need to add the spine (absolute 0 0 )  -->
 
-<script>
-// Toggle Register/Un-Register
-$("#registerButton").click(function() {
-	$(".registration").slideToggle("invisible");
-		$(this).text(function(i,v) {
-    		return v === '  Back  ' ? 'Register' : '  Back  '
+		<script>
+		// Toggle Register/Un-Register
+		$("#registerButton").click(function() {
+			$(".registration").slideToggle("invisible");
+				$(this).text(function(i,v) {
+		    		return v === '  Back  ' ? 'Register' : '  Back  '
+				});
 		});
-});
-</script>
+		</script>
 @stop
 
