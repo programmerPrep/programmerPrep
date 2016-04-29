@@ -8,7 +8,6 @@
 			<p class="definition">Connecting aspiring Jr. Developers to Mentors in the industry</p>
 
 			<!-- login -->
-<<<<<<< HEAD
 <!-- 			<form method="POST" id="signupForm">
  -->			{{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
 
@@ -17,7 +16,6 @@
  -->                {{ Form::text('username', null, array('class' => 'form-control', 'placeholder' => 'Username')) }}
 <!--         		<input id="password" name="password" type="password" placeholder="password"></br>
  -->                {{ Form::password('password', array('placeholder' => 'Password', 'class' => 'form-control')) }}
-                    {{ Form::close() }} 
         		<div class="registration ">
 		    		{{-- <input id="confirmPassword" name="confirmPassword" type="password" placeholder="confirmPassword"> --}}
 		    		{{ Form::password('confirmPassword', array('placeholder' => 'Confirm password', 'class' => 'form-control')) }}
@@ -28,9 +26,7 @@
           		<div class="loginFormButtons">
         			<button type="button" id="registerButton" class="loginFormButton">Register</button>
         			{{-- <button type="submit" id="loginButton" class="loginFormButton">Login</button> --}}
-                    {{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
                     {{ Form::submit('Sign in', array('class' => 'btn-log')); }}
-                    {{ Form::close() }} 
       			</div>
 <!--           	</form>
  -->            {{ Form::close() }}         
