@@ -20,15 +20,15 @@ $().ready(function(){
         },
         messages: {
             username:{
-                required: "<br><font color=red>This field is required</font>",
-                maxlength: "<br><font color=red>Max length is 15 characters</font>"
+                required: "<font color=red>This field is required</font>",
+                maxlength: "<font color=red>Max length is 15 characters</font>"
             }, 
             password: {
-                required: "<br><font color=red>This field is required</font>",
-                maxlength:"<br><font color=red>Max length is 20 characters</font>",
+                required: "<font color=red>This field is required</font>",
+                maxlength:"<font color=red>Max length is 20 characters</font>",
             },
-            confirmPassword: "<br><font color=red>Please enter the same value again</font",
-            email: "<br><font color=red>This field is required</font>"
+            confirmPassword: "<font color=red>Please enter the same value again</font",
+            email: "<font color=red>This field is required</font>"
         }
     })
 });

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 	@section('content')
 
+
     
 
 	<body id="landingBody">
@@ -46,5 +47,10 @@
 	</script>
 
 
+
 @stop
+
+
+
+
 
