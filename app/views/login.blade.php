@@ -8,7 +8,6 @@
 			<p class="definition">Connecting aspiring Jr. Developers to Mentors in the industry</p>
 
 			<!-- login -->
-<<<<<<< HEAD
 <!-- 			<form method="POST" id="signupForm">
  -->			{{ Form::open(array('action' => 'UsersController@doLogin', 'class' => 'form-signin')) }}
 
