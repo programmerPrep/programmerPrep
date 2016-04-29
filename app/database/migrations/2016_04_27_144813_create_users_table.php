@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration {
             $table->increments('id');
             $table->string('email');
             $table->string('username', 15);
-            $table->string('password', 20);
+            $table->string('password');
             $table->string('first_name', 25);
             $table->string('last_name', 25)->nullable();
             $table->boolean('is_mentor');
