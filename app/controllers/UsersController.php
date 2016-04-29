@@ -6,9 +6,9 @@ class UsersController extends \BaseController {
 		
 		parent::__construct();
 
-		$this->beforeFilter('auth',      array('except' => array('doLogin', 'showLogin', 'showlogout', 'create',     'store')));
-	    $this->beforeFilter('admin',     array('except' => array('doLogin', 'showLogin', 'edit',       'showlogout', 'create', 'store', 'update')));
-	    $this->beforeFilter('edit_user', array('except' => array('doLogin', 'showLogin', 'showlogout', 'create',     'store',  'update')));
+		$this->beforeFilter('auth',      array('except' => array('checkLogin', 'doLogin', 'showLogin', 'showlogout', 'create',     'store')));
+	    $this->beforeFilter('admin',     array('except' => array('checkLogin', 'doLogin', 'showLogin', 'edit',       'showlogout', 'create', 'store', 'update')));
+	    $this->beforeFilter('edit_user', array('except' => array('checkLogin', 'doLogin', 'showLogin', 'showlogout', 'create',     'store',  'update')));
 	}
 
 	public function showLogin()
@@ -17,10 +17,11 @@ class UsersController extends \BaseController {
 	}
 
 	public function checkLogin(){
+        
 		if (Input::has('username') && Input::has('password') && Input::has('email')){
-			$this->create();
+			return $this->create();
 		} else {
-			$this->doLogin();
+			return $this->doLogin();
 		}
 	}
 
@@ -28,6 +29,7 @@ class UsersController extends \BaseController {
 		$validator = Validator::make(Input::all(), User::$loginRules);
 
 		if ($validator->fails()){
+            Session::flash('errorMessage', 'Username or password is missing');
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
@@ -68,6 +70,7 @@ class UsersController extends \BaseController {
 		$user->email    = Input::get('email');
 		$user->save();
 		
+        return Redirect::back();
 	}
 	public function confirm($confirmation_code)
     {

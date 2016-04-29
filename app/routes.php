@@ -19,9 +19,12 @@ Route::get('/', 'UsersController@showLogin');
 
 Route::post('/checklogin', 'UsersController@checkLogin');
 
+Route::get('/login', 'UsersController@showLogin');
+
 Route::post('/login', 'UsersController@doLogin');
 
 Route::get('/logout', 'UsersController@showlogout');
+
 
 Route::get('/dashboard', 'HomeController@showStatus');
 
