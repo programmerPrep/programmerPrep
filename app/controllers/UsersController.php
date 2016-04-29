@@ -32,6 +32,14 @@ class UsersController extends \BaseController {
 		return View::make('login');
 	}
 
+	public function checkLogin(){
+		if (Input::has('username') && Input::has('password') && Input::has('email')){
+			create();
+		} else {
+			doLogin();
+		}
+	}
+
 	public function doLogin(){
 		$validator = Validator::make(Input::all(), User::$loginRules);
 
@@ -65,16 +73,16 @@ class UsersController extends \BaseController {
 	}
 
 	public function create(){
-		$login_info = [
-			['first_name',        'First Name'],
-			['last_name',         'Last Name'],
-			['password',          'Password'],
-			['ver_password',      'Confirm Password'],
-			['email',             'Email'],
-			['username',          'Username'],
-			['confirmation_code', $confirmation_code]
-		];
-		return View::make('user.create',['login_info' => $login_info]);
+		$validator = Validator::make(Input::all(), User::$loginRegistrationRules);
+		if ($validator->fails()){
+			return Redirect::back()->withInput()->withErrors($validator);
+		}
+
+		$user = new User();
+		$user->username = Input::get('username');
+		$user->password = Input::get('password');
+		$user->email    = Input::get('email');
+		$user->save();
 		
 	}
 	public function confirm($confirmation_code)
