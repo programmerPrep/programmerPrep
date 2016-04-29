@@ -12,7 +12,7 @@ class UsersController extends \BaseController {
 	}
 
 	public function showLogin(){
-		$email = Input::get('email');
+		$email = Input::get('username');
 		$password = Input::get('password');
 
 		if (Auth::attempt(array('email' => $email, 'password' => $password), true)) {
@@ -33,18 +33,15 @@ class UsersController extends \BaseController {
 	}
 
 	public function doLogin(){
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make(Input::all(), User::$loginRules);
 
 		if ($validator->fails()){
-			// return Redirect::back()->withInput()->withErrors($validator);
-			return Redirect::action('HomeController@showStatusPage');
+			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
-		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))){
-			Session::flash('successMessage' , 'Logged in!');
+		if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))){
 			return Redirect::action('HomeController@showStatusPage');
 		} else {
-			Session::flash('errorMessage', 'Your email or password was not correct');
 			return Redirect::back()->withInput();
 		}
 	}
