@@ -79,9 +79,17 @@ form input[type=text], input[type=email], input[type=password]{
 	margin-bottom: -16px;
 }
 
+#registerButton{
+	margin-right: 10%;
+}
+
+#loginButton {
+	margin-left: 10%;
+}
+
 #registerButton:active, #loginButton:active {
 	border: solid red 2px;
-	
+
 }
 
 /*#registerButton{
