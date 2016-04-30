@@ -1,4 +1,4 @@
-#masterHTML{
+html{
 	height: 100vh;
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
@@ -120,3 +120,7 @@ select:focus {
   border-bottom: 3px solid black;
   outline: 0; 
 }
+.stickyNote:hover{
+}
+
+
