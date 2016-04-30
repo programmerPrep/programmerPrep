@@ -25,6 +25,7 @@ Route::post('/login', 'UsersController@doLogin');
 
 Route::get('/logout', 'UsersController@showlogout');
 
+Route::get('/testrelations/{id}', 'DashboardController@show');
 
 Route::get('/dashboard', 'HomeController@showStatusPage');
 

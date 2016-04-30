@@ -56,6 +56,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'password' => 'required',
 		'email'	   => 'email',
 	);
+
+	// parameter must be user object
+	public static function checkIfMentor($user){
+		if ($user->is_mentor == 1){
+			return true;
+		} else {
+			return false;
+		}
+	}
 	public function setPasswordAttribute($value)
 	{
 		$this->attributes['password'] = Hash::make($value);
