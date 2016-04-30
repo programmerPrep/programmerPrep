@@ -5,11 +5,12 @@
     <title>test</title>
 </head>
 <body>
-    @foreach($relationship as $relationships)
-        {{{$relationships->student_id}}}
-
-    @endforeach
-    test
+    <?php var_dump($pending) ?>
+    pending
+    
+    <?php var_dump($active) ?>
+    active
+    
 </body>
 </html>
 
