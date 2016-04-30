@@ -1,6 +1,6 @@
 <!-- view -->
 <!DOCTYPE html>
-<html>
+<html id="masterHTML">
     <head>
         <meta charset="utf-8">
         <title>programmerPrep</title>
@@ -16,6 +16,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
         <!-- frontEndValidation -->
         <script src="js/frontEndValidation.js"></script>
+        <!-- external dashboard css -->
+        <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
         @yield('top-script')
     </head>
     <body>

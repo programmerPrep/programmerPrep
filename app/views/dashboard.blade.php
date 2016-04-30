@@ -1,17 +1,17 @@
-<<<<<<< HEAD
+
 @extends('layouts.master')
 @section('content')
 
-<body>
+<body id="dashboardBODY">
 
 <ul>
-	<li> home </li>
-	<li> calender</li>
-	<li> imaginaryG+Button</li>
-	<li> allMentors</li>
+	<li><a href="#"> home</a> </li>
+	<li><a href="#"> calender</a></li>
+	<li><a href="#"> imaginaryG+Button</a></li>
+	<li><a href="#"> allMentors</a></li>
 
-	<li> logOut</li>
-	<li> aboutUs</li>
+	<li><a href="#"> logOut</a></li>
+	<li><a href="#"> aboutUs</a></li>
 </ul>
 
 
