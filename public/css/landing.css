@@ -1,4 +1,4 @@
-html{
+#masterHTML{
 	height: 100vh;
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
@@ -91,7 +91,13 @@ form input[type=text], input[type=email], input[type=password]{
 	border: solid red 2px;
 
 }
+.stickyNote{
+	zoom: 20%;
+	opacity: 1;
+	float: right;
+	margin-left: -0px;
 
+}
 /*#registerButton{
 	margin-right: 10%;
 }
