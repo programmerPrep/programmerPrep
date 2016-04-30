@@ -31,8 +31,8 @@
 				<button type="button" id="registerButton" class="loginFormButton">Register</button>
 				{{-- <button type="submit" id="loginButton" class="loginFormButton">Login</button> --}}
 				{{ Form::submit('Sign in', array('class' => 'btn-log')); }}
-				<img class="stickyNote" src="/img/stickyNote.png">
-
+				<!-- stickyNote -->
+				<a href="aboutUs.blade.php"><img class="stickyNote" src="/img/stickyNote.png"> </a>
 			</div>
 			</div>
 			</div>
