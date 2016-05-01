@@ -69,6 +69,9 @@ class UsersController extends \BaseController {
 		$user->password = Input::get('password');
 		$user->email    = Input::get('email');
 		$user->save();
+
+
+		// Why not Auth::attempt with the created user and send them to their newly created dashboard?
 		
         return Redirect::back();
 	}
