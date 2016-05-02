@@ -5,10 +5,12 @@
 }
 
 #dashboardUL{
-	display: inline-block;
+	background-color: red;
+	display: ;
 	position: absolute;
-		left: 0px;
-		top: 0px;
-		margin-left: 0px;
+	left: 0px;
+	top: 0px;
+	margin-left: 0px;
+	float: left;
 
 }
