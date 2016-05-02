@@ -53,12 +53,6 @@ button {
 	display: none;   
 }
 
-/*legend{
-	border: solid black 2px;
-	float: left;
-	padding-left: 1%;
-}
-*/
 form input[type=text], input[type=email], input[type=password]{
 	width: 64%;
 	text-align: center;
@@ -92,19 +86,16 @@ form input[type=text], input[type=email], input[type=password]{
 
 }
 .stickyNote{
+	position: relative;
 	zoom: 20%;
-	opacity: 1;
+	/*opacity: 1;*/
 	float: right;
-	margin-left: -0px;
+	/*padding: 40px;*/
+	margin-left: -10%;
 
 }
-/*#registerButton{
-	margin-right: 10%;
-}
-#loginButton{
-	margin-left: 10%;
-}*/
 
+/*over writing skeletons focus*/
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -120,7 +111,6 @@ select:focus {
   border-bottom: 3px solid black;
   outline: 0; 
 }
-.stickyNote:hover{
-}
+
 
 
