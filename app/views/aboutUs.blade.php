@@ -4,12 +4,12 @@
 
 <main>
 	<!-- <div class="container"> -->
-		<div class="row">
+		<div class="row us">
 			<!-- 4 pictures of us -->
 			<div class="burney">
 			    <div class="three columns">
 					<img class="picture" src="/img/burney.jpg">
-					<br>front end <br>
+					<br>Front-End <br>
 					<img class="icon" src="/icons/git.png">
 					<img class="icon" src="/icons/link.png">
 					<img class="icon" src="/icons/mail.png">
@@ -19,7 +19,7 @@
 			<div class="greg">
 				<div class="three columns">
 					<img class="picture"src="/img/greg.jpg">
-					<br>front end<br>
+					<br>Front-End<br>
 					<img class="icon" src="/icons/git.png">
 					<img class="icon" src="/icons/link.png">
 					<img class="icon" src="/icons/mail.png">
@@ -29,7 +29,7 @@
 			<div class="logan">
 				<div class="three columns">
 					<img class="picture" id="logan" src="/img/logan.jpg">
-					<br>back end<br>
+					<br>Back-End<br>
 					<img class="icon" src="/icons/git.png">
 					<img class="icon" src="/icons/link.png">
 					<img class="icon" src="/icons/mail.png">
@@ -39,7 +39,7 @@
 			<div class="nick">
 				<div class="three columns">
 					<img class="picture" src="/img/nick.jpg">
-					<br>back end<br>
+					<br>Back-End<br>
 					<img class="icon" src="/icons/git.png">
 					<img class="icon" src="/icons/link.png">
 					<img class="icon" src="/icons/mail.png">
