@@ -2,9 +2,10 @@ html{
 	height: 100%;
 }
 #aboutUsBody{
-	height: 100vh;
+	height: 100%;
   	background-image: url('../img/notebookPaper.jpeg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+	background-attachment: fixed.
     font-family: 'Copperplate Gothic Bold', sans-serif;
     text-align: center;
 
