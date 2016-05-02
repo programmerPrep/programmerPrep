@@ -32,7 +32,7 @@
 				{{-- <button type="submit" id="loginButton" class="loginFormButton">Login</button> --}}
 				{{ Form::submit('Sign in', array('class' => 'btn-log')); }}
 				<!-- stickyNote -->
-				<a href="aboutUs.blade.php"><img class="stickyNote" src="/img/stickyNote.png"> </a>
+				<a href={{{'aboutUs'}}}><img class="stickyNote" src="/img/stickyNote.png"> </a>
 			</div>
 			</div>
 			</div>

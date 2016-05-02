@@ -71,5 +71,10 @@ class DashboardController extends \BaseController {
 
         return View::make('mentor_index_test')->with('mentors', $mentors);
     }
+
+    public function aboutUs()
+    {
+        return View::make('aboutUs');
+    }
 }
 
