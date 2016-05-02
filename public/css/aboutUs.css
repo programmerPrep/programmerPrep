@@ -1,0 +1,17 @@
+#aboutUsBody{
+	height: 100%;
+	/*width: 100vw;*/
+  	background-image: url('../img/notebookPaper.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.picture{
+	border-radius: 50%;
+	margin: 2%;
+}
+
+#logan{
+	zoom: 22%;
+	/*width: 70%;*/
+}

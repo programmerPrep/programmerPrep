@@ -1,5 +1,6 @@
-html{
+#landingBody{
 	height: 100vh;
+	width: 100vw;
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
