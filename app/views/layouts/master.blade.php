@@ -4,6 +4,8 @@
     <head>
         <meta charset="utf-8">
         <title>programmerPrep</title>
+        <!-- Fonts -->
+        <link rel="stylesheet" type="text/css" href="./css/fonts.css">
         <!-- normalize CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
         <!-- skeleton CDN -->
@@ -18,9 +20,12 @@
         <script src="js/frontEndValidation.js"></script>
         <!-- external dashboard css -->
         <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+        <!-- Nav Bar -->
+        <link rel="stylesheet" type="text/css" href="./css/navbar.css">
+        
         @yield('top-script')
     </head>
-    <body>
+    <body style="font-family: Yunus;">
  
         <main class="container">
             @yield('content')
