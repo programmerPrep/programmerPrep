@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
         $user->password = 'logan';
         $user->img_url = '/img/Shark_profile_img.png';
         $user->is_mentor = 1;
+        $user->bio = 'A million dollars isnt cool. You know what is? A billion dollars.';
         $user->github_name = 'yungshark';
         $user->confirmed = 1;
         $user->save();
