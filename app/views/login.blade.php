@@ -25,7 +25,7 @@
 					{{ Form::password('confirmPassword', array('placeholder' => ' confirmPassword', 'class' => 'form-control', 'id' => 'confirmPassword'))}}
 				</br>
 				{{-- <input id="email" name="email" type="email" placeholder="emailAddress"> --}}
-				{{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'mail', 'id' => 'email')) }}
+				{{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'email', 'id' => 'email')) }}
 			</div>
 			<div class="loginFormButtons">
 				<button type="button" id="registerButton" class="loginFormButton">Register</button>
