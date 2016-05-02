@@ -1,6 +1,6 @@
 html{
 	height: 100%;
-	font-size: 1.1rem;
+	/*font-size: 1.1rem;*/
 
 }
 #aboutUsBody{
@@ -9,6 +9,7 @@ html{
   	background-image: url('../img/notebookPaper.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+	font-size: 2rem;
 }
 
 .picture{
@@ -21,5 +22,18 @@ html{
 }
 
 .icon{
-	zoom: 10%;
+	zoom: 20%;
+}
+
+.burney{
+	text-align: center;
+}
+.greg{
+	text-align: center;
+}
+.logan{
+	text-align: center;
+}
+.nick{
+	text-align: center;
 }
