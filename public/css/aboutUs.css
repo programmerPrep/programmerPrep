@@ -8,9 +8,19 @@ html{
 	/*width: 100vw;*/
   	background-image: url('../img/notebookPaper.jpeg');
     background-repeat: no-repeat;
+    font-family: 'Copperplate Gothic Bold', sans-serif;
+    text-align: center;
+
     background-size: cover;
 	font-size: 2rem;
 }
+
+
+  	
+    
+
+
+
 
 .picture{
 	border-radius: 50%;
@@ -18,6 +28,7 @@ html{
 	color: white;
 	margin-top: 20px;
 	border: solid black 3px;
+	zoom: 110%;
 
 }
 
