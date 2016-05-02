@@ -10,6 +10,7 @@ class UserSeeder extends Seeder
         $user->first_name = 'Logan';
         $user->last_name = 'Farmer';
         $user->email = 'thevisagiftcard@gmail.com';
+        $user->interests = 'PHP, JavaScript, C#, Boo';
         $user->password = 'logan';
         $user->img_url = '/img/Shark_profile_img.png';
         $user->is_mentor = 1;
@@ -60,6 +61,19 @@ class UserSeeder extends Seeder
         $user4->github_name = 'Penthious';
         $user4->confirmed = 1;
         $user4->save();
+
+        $user = new User();
+        $user->username = 'Bobby';
+        $user->first_name = 'Bob';
+        $user->last_name = 'Bobberson';
+        $user->email = 'bob@gmail.com';
+        $user->interests = 'C#, Boo, Cobol, .NET, Assembly';
+        $user->password = 'bobberson';
+        $user->img_url = '/img/Bob_profile_img.png';
+        $user->is_mentor = 1;
+        $user->github_name = 'Bobby';
+        $user->confirmed = 1;
+        $user->save();
     
     }
 }

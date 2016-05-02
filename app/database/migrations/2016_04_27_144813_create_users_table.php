@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration {
             $table->string('last_name', 25)->nullable();
             $table->boolean('is_mentor');
             $table->text('bio')->nullable();
+            $table->string('interests')->nullable();
             $table->string('img_url')->nullable();
             $table->string('address')->nullable();
             $table->string('github_name')->unique()->nullable();
