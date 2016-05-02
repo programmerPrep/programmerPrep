@@ -49,7 +49,7 @@ class UsersController extends \BaseController {
 			return Redirect::action('HomeController@showLogin');
 		}
 
-
+		
 		return $user;
 
 		// $relationship = Relationship::where('user_id', '=', $user->id)->get();
@@ -108,9 +108,18 @@ class UsersController extends \BaseController {
     	// for the user.
 	public function edit($id)
 	{
-		// goes to edit file
-        $username = post::find($username);
-        return View::make('user.edit')->make();
+		if (Auth::id() != $id) {
+		
+			return Redirect::back();
+		
+		} elseif (Auth::id() == $id) {
+			
+			$user = User::find($id);
+
+			return View::make('edit')->with('user', $user);
+		}
+
+		
 	}
 
 	public function showlogout(){
