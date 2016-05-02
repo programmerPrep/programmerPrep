@@ -3,8 +3,6 @@
 @section('content')
 
 <body id="dashboardBODY">
-
-
 	    <div id="wrapper">
         	<div id="sidebar-wrapper">
             	<ul class="sidebar-nav Yunus">
@@ -25,6 +23,5 @@
             	</ul>
         	</div>
         </div>
-
 </body>
 @stop

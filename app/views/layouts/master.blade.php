@@ -1,6 +1,6 @@
 <!-- view -->
 <!DOCTYPE html>
-<html id="masterHTML">
+<html id="landing">
     <head>
         <meta charset="utf-8">
         <title>programmerPrep</title>
@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
         <!-- skeleton CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-        <!--  external css-->
+        <!--  external landing css-->
         <link rel="stylesheet" type="text/css" href="./css/landing.css">
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -22,7 +22,8 @@
         <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
         <!-- Nav Bar -->
         <link rel="stylesheet" type="text/css" href="./css/navbar.css">
-        
+        {{-- AboutUs css --}}
+        <link rel="stylesheet" type="text/css" href="./css/aboutUs.css">
         @yield('top-script')
     </head>
     <body style="font-family: Yunus;">
