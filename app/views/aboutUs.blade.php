@@ -3,25 +3,32 @@
 
 
 <main>
-	<div class="container">
+	<!-- <div class="container"> -->
 		<div class="row">
 			<!-- 4 pictures of us -->
-			<img class="picture" src="/img/burney.jpg">
-			email github linkdin
-			front end
+		    <div class="three columns">
+				<img class="picture" src="/img/burney.jpg">
+				email github linkdin
+				front end
+			</div>
 
-			<img class="picture"src="/img/greg.jpg">
-			email github linkdin
-			front end
+			<div class="three columns">
+				<img class="picture"src="/img/greg.jpg">
+				email github linkdin
+				front end
+			</div>
 
-			<img class="picture" id="logan" src="/img/logan.jpg">
-			email github linkdin
-			back end
+			<div class="three columns">
+				<img class="picture" id="logan" src="/img/logan.jpg">
+				email github linkdin
+				back end
+			</div>
 
-			<img class="picture" src="/img/nick.jpg">
-			email github linkdin
-			back end
-		</div>
+			<div class="three columns">
+				<img class="picture" src="/img/nick.jpg">
+				email github linkdin
+				back end	
+			</div>
 	</div>
 </main>
 <body id="aboutUsBody">

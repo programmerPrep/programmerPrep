@@ -1,5 +1,8 @@
-#aboutUsBody{
+html{
 	height: 100%;
+}
+#aboutUsBody{
+	height: 100vh;
 	/*width: 100vw;*/
   	background-image: url('../img/notebookPaper.jpeg');
     background-repeat: no-repeat;
@@ -8,10 +11,15 @@
 
 .picture{
 	border-radius: 50%;
-	margin: 2%;
+	box-shadow: 10px 10px 5px #888888;
+	color: white;
+	margin-top: 20px;
+}
+
+	/*margin: 2%;*/
 }
 
 #logan{
-	zoom: 22%;
+
 	/*width: 70%;*/
 }
