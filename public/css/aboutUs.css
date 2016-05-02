@@ -1,5 +1,7 @@
 html{
 	height: 100%;
+	font-size: 1.1rem;
+
 }
 #aboutUsBody{
 	height: 100vh;
@@ -11,15 +13,13 @@ html{
 
 .picture{
 	border-radius: 50%;
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: 5px 5px 5px #888888;
 	color: white;
 	margin-top: 20px;
+	border: solid black 3px;
+
 }
 
-	/*margin: 2%;*/
-}
-
-#logan{
-
-	/*width: 70%;*/
+.icon{
+	zoom: 10%;
 }

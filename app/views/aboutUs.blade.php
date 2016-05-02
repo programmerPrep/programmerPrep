@@ -8,25 +8,33 @@
 			<!-- 4 pictures of us -->
 		    <div class="three columns">
 				<img class="picture" src="/img/burney.jpg">
-				email github linkdin
+				<img class="icon" src="/icons/git.png">
+				<img class="icon" src="/icons/link.png">
+				<img class="icon" src="/icons/mail.png">
 				front end
 			</div>
 
 			<div class="three columns">
 				<img class="picture"src="/img/greg.jpg">
-				email github linkdin
+				<img class="icon" src="/icons/git.png">
+				<img class="icon" src="/icons/link.png">
+				<img class="icon" src="/icons/mail.png">
 				front end
 			</div>
 
 			<div class="three columns">
 				<img class="picture" id="logan" src="/img/logan.jpg">
-				email github linkdin
+				<img class="icon" src="/icons/git.png">
+				<img class="icon" src="/icons/link.png">
+				<img class="icon" src="/icons/mail.png">
 				back end
 			</div>
 
 			<div class="three columns">
 				<img class="picture" src="/img/nick.jpg">
-				email github linkdin
+				<img class="icon" src="/icons/git.png">
+				<img class="icon" src="/icons/link.png">
+				<img class="icon" src="/icons/mail.png">
 				back end	
 			</div>
 	</div>
