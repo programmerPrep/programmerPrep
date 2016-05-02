@@ -1,11 +1,8 @@
 html{
 	height: 100%;
-	/*font-size: 1.1rem;*/
-
 }
 #aboutUsBody{
 	height: 100vh;
-	/*width: 100vw;*/
   	background-image: url('../img/notebookPaper.jpeg');
     background-repeat: no-repeat;
     font-family: 'Copperplate Gothic Bold', sans-serif;
@@ -26,7 +23,6 @@ html{
 	margin-top: 20px;
 	border: solid black 3px;
 	zoom: 110%;
-
 }
 
 .icon{
