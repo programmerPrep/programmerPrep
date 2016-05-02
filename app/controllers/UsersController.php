@@ -44,18 +44,22 @@ class UsersController extends \BaseController {
 	{
 		$user = User::find($id);
 
-		if (Auth::check() && Auth::user()->id != $id){
+		if (!Auth::check()){
 			Session::flash('Not authenticated user so access is denied');
 			return Redirect::action('HomeController@showLogin');
 		}
-		$relationship = Relationship::where('user_id', '=', $user->id)->get();
 
-		if (!$user){
-			Session::flash('The user does not exist');
-			return View::make('login');
-		}
 
-		return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship));
+		return $user;
+
+		// $relationship = Relationship::where('user_id', '=', $user->id)->get();
+
+		// if (!$user){
+		// 	Session::flash('The user does not exist');
+		// 	return View::make('login');
+		// }
+
+		// return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship));
 	}
 
 	public function create(){
@@ -98,6 +102,10 @@ class UsersController extends \BaseController {
         return Redirect::route('HomeController@showLogin');
     }
 
+
+    	// Need to modify edit controller. It should return the edit view, which should submit it's form
+    	// to the update function. Update function will change the database, then redirect to the profile page
+    	// for the user.
 	public function edit($id)
 	{
 		// goes to edit file
