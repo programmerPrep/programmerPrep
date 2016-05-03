@@ -38,13 +38,10 @@ button {
 .title{
 	font-size: 6vw;
 	font-weight: bold;
-
 }
 
 .definition{
 	font-size: 1.6rem;
-	/*border: solid black 2px;*/
-	/*margin-bottom: 1px;*/
 }
 
 .invisible{
