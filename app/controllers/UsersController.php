@@ -106,17 +106,17 @@ class UsersController extends \BaseController {
     	// Need to modify edit controller. It should return the edit view, which should submit it's form
     	// to the update function. Update function will change the database, then redirect to the profile page
     	// for the user.
-	public function edit($id)
+	public function edit($username)
 	{
-		if (Auth::id() != $id) {
-		
+		if (Auth::user()->username != $username) {
+	
 			return Redirect::back();
 		
-		} elseif (Auth::id() == $id) {
+		} elseif (Auth::user()->username == $username) {
 			
-			$user = User::find($id);
+			$user = User::find(Auth::id());
 
-			return View::make('edit')->with('user', $user);
+			return View::make('testedit')->with('user', $user);
 		}
 
 		
