@@ -22,10 +22,10 @@
 
 				<div class="registration">
 					{{-- <input id="confirmPassword" name="confirmPassword" type="password" placeholder="confirmPassword"> --}}
-					{{ Form::password('confirmPassword', array('placeholder' => ' confirmPassword', 'class' => 'form-control', 'id' => 'confirmPassword'))}}
-				</br>
+					{{ Form::password('confirmPassword', array('placeholder' => ' confirm password', 'class' => 'form-control', 'id' => 'confirmPassword'))}}
 				{{-- <input id="email" name="email" type="email" placeholder="emailAddress"> --}}
 				{{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'email', 'id' => 'email')) }}
+				{{ Form::text('github', null, array('class' => 'form-control', 'placeholder' => 'github username', 'id' => 'githubUsername')) }}
 			</div>
 			<div class="loginFormButtons">
 				<button type="button" id="registerButton" class="loginFormButton">Register</button>
