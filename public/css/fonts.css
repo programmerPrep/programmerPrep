@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Yunus;
+    src: url('../fonts/Yunus/YunusH.otf');
+}
+
+.Yunus{
+	font-family: Yunus;
+	font-size: 4rem;
+	font-style: bold;
+	color: black;
+}
