@@ -26,8 +26,7 @@
         <link rel="stylesheet" type="text/css" href="./css/aboutUs.css">
         @yield('top-script')
     </head>
-    <body style="font-family: Yunus;">
- 
+    
         <main class="container">
             @yield('content')
         </main>      
