@@ -17,11 +17,11 @@
 
 Route::get('/', 'UsersController@showLogin');
 
-Route::post('/checklogin', 'UsersController@checkLogin');
+// Route::post('/checklogin', 'UsersController@checkLogin');
 
-Route::get('/login', 'UsersController@showLogin');
+// Route::get('/login', 'UsersController@showLogin');
 
-Route::post('/login', 'UsersController@doLogin');
+Route::post('/login', 'UsersController@checkLogin');
 
 Route::get('/logout', 'UsersController@showlogout');
 
@@ -29,22 +29,22 @@ Route::get('/aboutUs', 'DashboardController@aboutUs');
 
 
 	// Test route
-Route::get('/testrelations/{id}', 'DashboardController@show');
+// Route::get('/testrelations/{id}', 'DashboardController@show');
 
 
 	// Mentor index test route
-Route::get('/mentorIndexTest', 'DashboardController@mentorIndex');
+// Route::get('/mentorIndexTest', 'DashboardController@mentorIndex');
 
 
 Route::get('/dashboard', 'HomeController@showStatusPage');
 
 Route::resource('/users','UsersController');
 
-Route::get('/{username}/edit','UsersController@edit');
+Route::post('users/{id}','UsersController@update');
 
-Route::get('/about', 'HomeController');
+// Route::get('/about', 'HomeController');
 
-Route::get('/test', 'HomeController@showWelcome');
+// Route::get('/test', 'HomeController@showWelcome');
 
 Route::get('register/verify/{confirmationCode}', [
     'as' => 'confirmation_path',
