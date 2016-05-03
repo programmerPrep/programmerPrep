@@ -11,7 +11,7 @@
         <!-- skeleton CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
         <!--  external landing css-->
-        <link rel="stylesheet" type="text/css" href="./css/landing.css">
+        <link rel="stylesheet" type="text/css" href="./css/login.css">
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <!-- jQuery Validation CDN -->
@@ -26,8 +26,7 @@
         <link rel="stylesheet" type="text/css" href="./css/aboutUs.css">
         @yield('top-script')
     </head>
-    <body style="font-family: Yunus;">
- 
+    
         <main class="container">
             @yield('content')
         </main>      
