@@ -40,6 +40,31 @@ class UsersController extends \BaseController {
 		}
 	}
 
+	public function get_content_from_github($url)
+	{
+
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL,$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, ['User-Agent: PlatonicPoohBear']); 
+		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,1);
+		
+		$content = curl_exec($ch);
+		curl_close($ch);
+		
+		return json_decode($content);
+	}
+
+
+	public function get_repos()
+	{
+			// This will search by the user's Github username.
+		$content = $this->get_content_from_github('https://api.github.com/search/repositories?q=user:PlatonicPoohBear');
+
+		return $content;
+	}
+
+
 	public function show($id)
 	{
 		$user = User::find($id);
@@ -49,8 +74,10 @@ class UsersController extends \BaseController {
 			return Redirect::action('HomeController@showLogin');
 		}
 
+		$content = $this->get_repos();
+		$content = $content->items[0];
 		
-		return $user;
+		return array($user, $content);
 
 		// $relationship = Relationship::where('user_id', '=', $user->id)->get();
 
