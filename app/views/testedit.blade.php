@@ -1,22 +1,23 @@
-@extends('layouts.master')
-@section('content')
-<body>
-     <!-- <?php var_dump($user);?> -->
-    
-    field : limits
+<body id="editBody" class="editBody">
+	field : limits
+		email 255<br>
+		username20<br>
+		firstname 25
+		lastname25
+		password 255
+		confirm password
 
-email 255
-username20
-firstname 25
-lastname25
-password 255
-confirm password
+		bio: text area unlimited
+		interestes: open eneded 255
+		image
+		github name
+		255
 
-bio: text area unlimited
-interestes: open eneded 255
-image
-github name
-255
-</body>
-@stop
+		test me out
 
+	</body>
+
+
+
+<!-- var dump the user info -->
+<!-- <?php var_dump($user);?> -->

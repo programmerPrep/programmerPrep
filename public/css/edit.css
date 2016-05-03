@@ -1,6 +1,15 @@
-#editBody{
-    background-position: center;
-  	font-family: 'Copperplate Gothic Bold', sans-serif;
-  	text-align: center;
-    font-size: 2rem;
+/*#editBody{
+	height: 100%;
+  	background-image: url('../../img/notebookPaper.jpeg');
+    background-repeat: repeat;
+	background-attachment: fixed;
+    font-family: 'Copperplate Gothic Bold', sans-serif;
+    text-align: center;
+    background-size: cover;
+	font-size: 2rem;
+	background-color: green;
+}
+*/
+.editBody{
+	background-color: green;
 }

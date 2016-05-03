@@ -1,4 +1,3 @@
-<!-- view -->
 <!DOCTYPE html>
 <html id="landing">
     <head>
@@ -22,11 +21,13 @@
         <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
         <!-- Nav Bar -->
         <link rel="stylesheet" type="text/css" href="./css/navbar.css">
-        {{-- AboutUs css --}}
+        <!-- AboutUs css -->
         <link rel="stylesheet" type="text/css" href="./css/aboutUs.css">
+        <!--  testedit.blade.php css -->
+        <link rel="stylesheet" type="text/css" href="./css/edit.css">
+
         @yield('top-script')
     </head>
-    
         <main class="container">
             @yield('content')
         </main>      
