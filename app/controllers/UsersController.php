@@ -171,9 +171,11 @@ class UsersController extends \BaseController {
 			$user->bio      = Input::get('bio');
 			$user->interests      = Input::get('interests');
 			$user->github_name      = Input::get('github_name');
-			$user->img_url      = Input::file('img_url');
+			$user->img_url      = Input::get('img_url');
 
 			$user->save();
+
+			return Redirect::action('UsersController@show', Auth::id());
 			
 		}
 		
