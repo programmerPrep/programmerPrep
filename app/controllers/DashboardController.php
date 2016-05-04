@@ -58,19 +58,19 @@ class DashboardController extends \BaseController {
     }
 
 
-    public function mentorIndex()
-    {
-            // We'll need this input on the page somewhere.
-        $search = Input::get('search');
+    // public function mentorIndex()
+    // {
+    //         // We'll need this input on the page somewhere.
+    //     $search = Input::get('search');
 
-        if (is_null($search)) {
-            $mentors = DB::table('users')->where('is_mentor', 1)->orderBy('created_at', 'desc')->get();
-        } else {
-            $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
-        }
+    //     if (is_null($search)) {
+    //         $mentors = DB::table('users')->where('is_mentor', 1)->orderBy('created_at', 'desc')->get();
+    //     } else {
+    //         $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
+    //     }
 
-        return View::make('mentor_index_test')->with('mentors', $mentors);
-    }
+    //     return View::make('mentor_index_test')->with('mentors', $mentors);
+    // }
 
     public function aboutUs()
     {

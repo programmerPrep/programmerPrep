@@ -133,17 +133,17 @@ class UsersController extends \BaseController {
     	// Need to modify edit controller. It should return the edit view, which should submit it's form
     	// to the update function. Update function will change the database, then redirect to the profile page
     	// for the user.
-	public function edit($username)
+	public function edit($id)
 	{
-		if (Auth::user()->username != $username) {
+		if (Auth::id() != $id) {
 	
 			return Redirect::back();
 		
-		} elseif (Auth::user()->username == $username) {
+		} elseif (Auth::id() == $id) {
 			
-			$user = User::find(Auth::id());
+			$user = User::find($id);
 
-			return View::make('testedit')->with('user', $user);
+			return View::make('edit')->with('user', $user);
 		}
 
 		
@@ -154,32 +154,32 @@ class UsersController extends \BaseController {
 		return Redirect::action('HomeController@login');
 	}
 
-	public function store() {
+	public function update()
+	{
+		$validator = Validator::make(Input::all(), User::$rules);
 
-		$user = new User();
+		if ($validator->fails()) {
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+			$user = User::find(Auth::id());
 
-		$confirmation_code = str_random(30);
+			$user->first_name = Input::get('first_name');
+			$user->last_name  = Input::get('last_name');
+			$user->username   = Input::get('username');
+			$user->password   = Input::get('password');
+			$user->email      = Input::get('email');
+			$user->bio      = Input::get('bio');
+			$user->interests      = Input::get('interests');
+			$user->github_name      = Input::get('github_name');
+			$user->img_url      = Input::get('img_url');
 
-		return $this->validation($user);
-		 $credentials = [
-            'username' => Input::get('username'),
-            'password' => Input::get('password'),
-            'confirmed' => 1
-        ];
-        $rules = [
-            'username' => 'required|exists:users',
-            'password' => 'required'
-        ];
-        if ( ! Auth::attempt($credentials))
-        {
-            return Redirect::back()
-                ->withInput()
-                ->withErrors([
-                    'credentials' => 'We were unable to sign you in.'
-                ]);
-        }
+			$user->save();
 
-        return Redirect::action('HomeController@dashboard');	
+			return Redirect::action('UsersController@show', Auth::id());
+			
+		}
+		
+		
 	}
 
 	public function validation($user)
@@ -211,4 +211,19 @@ class UsersController extends \BaseController {
 			}
 		}
 	}
+
+
+	public function index()
+    {
+            // We'll need this input on the page somewhere.
+        $search = Input::get('search');
+
+        if (is_null($search)) {
+            $mentors = DB::table('users')->where('is_mentor', 1)->orderBy('created_at', 'desc')->get();
+        } else {
+            $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
+        }
+
+        return View::make('mentor_index_test')->with('mentors', $mentors);
+    }
 }
