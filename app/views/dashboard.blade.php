@@ -13,13 +13,13 @@
           					</div>
       					</form>
       				</li>
-                	<li class=""><a href="#">Home</a></li>
-                	<li><a href="#">Calendar</a></li>
-                	<li><a href="#">G+</a></li>
-                	<li><a href="#">My Profile</a></li>
-                	<li><a href="#">Mentors</a></li>
-                	<li><a href="#">Logout</a></li>
-                	<li><a href="#">About Us</a></li>
+                	<li class=""><a href="/dashboard">Home</a></li>
+                	<li><a href="https://calendar.google.com/calendar/">Calendar!</a></li>
+                	<li><a href="https://hangouts.google.com/">Hangouts!</a></li>
+                	<li><a href="/404">My Profile!</a></li>
+                	<li><a href="/mentorIndexTest">Mentors!</a></li>
+                	<li><a href="#">Logout!</a></li>
+                	<li><a href="/aboutUs">About Us!</a></li>
             	</ul>
         	</div>
         </div>

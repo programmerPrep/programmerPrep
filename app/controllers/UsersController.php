@@ -151,7 +151,7 @@ class UsersController extends \BaseController {
 
 	public function showlogout(){
 		Auth::logout();
-		return Redirect::action('HomeController@login');
+		return Redirect::action('UsersController@showLogin');
 	}
 
 	public function update()
