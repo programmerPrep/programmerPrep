@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('content')
 <main>
-			{{ Form::open(array('action' => 'UsersController@update', 'class' => 'form-signin')) }}
+			{{ Form::open(array('action' => 'UsersController@update', 'class' => 'form-signin', 'files' => true)) }}
 
 
 			<div class="loginField">
-				<!--<input id="username" name="username" type="text" Placeholder="username"><br>-->
+				
 
 				{{ Form::text('username', $user->username, array('class' => 'form-control', 'placeholder' => 'username', 'id'=>'username')) }}
 				{{ $errors->first('username', '<span class="help-block">:message</span>') }}
@@ -42,17 +42,17 @@
 				{{ Form::password('confirm_password', array('placeholder' => 'confirm_password', 'class' => 'form-control', 'id'=> 'confirm_password')) }}
 				{{ $errors->first('confirm_password', '<span class="help-block">:message</span>') }}
 
-				{{ Form::file('img_url', array('class' => 'form-control', 'placeholder' => 'img_url', 'id'=>'img_url')) }}	
+				{{ Form::file('img_url', array('class' => 'form-control', 'id'=>'img_url')) }}	
 				{{ $errors->first('img_url', '<span class="help-block">:message</span>') }}
 
 				<div class="registration">
 					
 				
 				</br>
-				{{-- <input id="email" name="email" type="email" placeholder="emailAddress"> --}}
+				
 				
 			</div>
-				{{-- <button type="submit" id="loginButton" class="loginFormButton">Login</button> --}}
+				
 				{{ Form::submit('Sign in', array('class' => 'btn-log')); }}
 				<!-- stickyNote -->
 				
