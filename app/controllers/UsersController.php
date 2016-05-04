@@ -156,8 +156,30 @@ class UsersController extends \BaseController {
 
 	public function update()
 	{
+		$validator = Validator::make(Input::all(), User::$rules);
 
-		return 'Success';
+		if ($validator->fails()) {
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+			$user = User::find(Auth::id());
+
+			$user->first_name = Input::get('first_name');
+			$user->last_name  = Input::get('last_name');
+			$user->username   = Input::get('username');
+			$user->password   = Input::get('password');
+			$user->email      = Input::get('email');
+			$user->bio      = Input::get('bio');
+			$user->interests      = Input::get('interests');
+			$user->github_name      = Input::get('github_name');
+			$user->img_url      = Input::get('img_url');
+
+			$user->save();
+
+			return Redirect::action('UsersController@show', Auth::id());
+			
+		}
+		
+		
 	}
 
 	public function validation($user)
