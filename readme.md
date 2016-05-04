@@ -1,6 +1,5 @@
 #ProgrammerPrep README.md
-
-# Connecting aspiring junior developers to mentors
+##Connecting aspiring junior developers to mentors
 
 just login and match up!
 
@@ -9,4 +8,3 @@ just login and match up!
 
 - Logan's Initial Commit
 - Burney's Initial Commit
-
