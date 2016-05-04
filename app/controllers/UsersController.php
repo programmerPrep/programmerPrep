@@ -160,7 +160,8 @@ class UsersController extends \BaseController {
 
 		if ($validator->fails()) {
 			return Redirect::back()->withInput()->withErrors($validator);
-		} else {
+		} elseif (Input::file('img_url')->isValid()) {
+
 			$user = User::find(Auth::id());
 
 			$user->first_name = Input::get('first_name');
@@ -171,7 +172,7 @@ class UsersController extends \BaseController {
 			$user->bio      = Input::get('bio');
 			$user->interests      = Input::get('interests');
 			$user->github_name      = Input::get('github_name');
-			$user->img_url      = Input::get('img_url');
+			$user->img_url      = Input::file('img_url')->move('img');
 
 			$user->save();
 
