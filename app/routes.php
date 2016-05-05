@@ -29,7 +29,7 @@ Route::get('/aboutUs', 'DashboardController@aboutUs');
 
 
 	// Test route
-// Route::get('/testrelations/{id}', 'DashboardController@show');
+Route::get('/testrelations/{id}', 'DashboardController@show');
 
 
 	// Mentor index test route
