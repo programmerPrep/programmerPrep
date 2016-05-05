@@ -21,7 +21,7 @@
 		
 		<footer class="footerStyle">
 
-			{{ Form::open(array('action' => 'DashboardController@mentorIndex', 'method' => 'GET', 'class' => 'navbar-form')) }}
+			{{ Form::open(array('action' => 'UsersController@index', 'method' => 'GET', 'class' => 'navbar-form')) }}
             		<div class="input-group">
             			{{ Form::text('keyword', NULL, array('placeholder' => 'Find a mentor...', 'class' => 'form-control navbar-search')) }}
             			<div class="input-group-btn glyphicon">

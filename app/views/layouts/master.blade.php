@@ -10,7 +10,7 @@
         <!-- skeleton CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
         <!--  landing css-->
-        <link rel="stylesheet" type="text/css" href="/css/landing.css">        
+        <link rel="stylesheet" type="text/css" href="/css/login.css">        
         <!-- external dashboard css -->
         <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
         <!-- NavBar -->
@@ -44,11 +44,11 @@
 
     </body>
     
-        @yield('top-script')
+    {{--     @yield('top-script')
     </head>
         <main class="container">
             @yield('content')
-        </main>      
+        </main>       --}}
 </html>
     {{-- graveyard --}}
     {{-- // <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> --}}
