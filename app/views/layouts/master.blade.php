@@ -12,7 +12,7 @@
         <!--  external landing css-->
         <link rel="stylesheet" type="text/css" href="/css/login.css">
         <!-- AboutUs css -->
-        <!-- <link rel="stylesheet" type="text/css" href="/css/aboutUs.css"> -->
+        <link rel="stylesheet" type="text/css" href="/css/aboutUs.css">
 
         <!-- external dashboard css -->
         <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
