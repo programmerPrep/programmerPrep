@@ -1,0 +1,11 @@
+.footerStyle{
+	height: 55px;
+	width: 300px;
+	border-radius: 25px;
+	position: fixed;
+	bottom: 0;
+	left: 30%;
+	text-align: center;
+	background: rgba(0,0,0,0.2);
+	margin: 20px;
+}

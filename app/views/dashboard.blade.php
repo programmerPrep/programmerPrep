@@ -4,27 +4,39 @@
 
 <body id="dashboardBODY">
 
+	<div class="container">
 
-	    <div id="wrapper">
-        	<div id="sidebar-wrapper">
-            	<ul class="sidebar-nav Yunus">
-                	<li class="marginAdjust">
-                		<form class="navbar-form" role="search">
-        					<div class="form-group">
-          						<input type="text" class="form-control" id="forcedInputSize" placeholder="Search">
-          					</div>
-      					</form>
-      				</li>
-                	<li class=""><a href="#">Home</a></li>
-                	<li><a href="#">Calendar</a></li>
-                	<li><a href="#">G+</a></li>
-                	<li><a href="#">My Profile</a></li>
-                	<li><a href="#">Mentors</a></li>
-                	<li><a href="#">Logout</a></li>
-                	<li><a href="#">About Us</a></li>
-            	</ul>
-        	</div>
-        </div>
+		<header class="CavortingTitle">programmerPrep</header>
+		
+		<div class="navbarStyle">
+			<ul class="YunusNavbar">
+				<li><a href="">Home</a></li>
+				<li><a href="">Calendar</a></li>
+				<li><a href="">Google+</a></li>
+				<li><a href="">Profile</a></li>
+				<li><a href="">Mentors</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Log Out</a></li>
+			</ul>
+		</div>	
+		
+		<footer class="footerStyle">
+
+			{{ Form::open(array('action' => 'DashboardController@mentorIndex', 'method' => 'GET', 'class' => 'navbar-form')) }}
+            		<div class="input-group">
+            			{{ Form::text('keyword', NULL, array('placeholder' => 'Find a mentor...', 'class' => 'form-control navbar-search')) }}
+            			<div class="input-group-btn glyphicon">
+            				{{ Form::submit('', array('class' => 'fa fa-search')) }}
+            			</div>
+            		</div>
+          				
+      		{{ Form:: close() }}
+
+		</div>
+		</footer>
+	
+
+	</div>
 
 </body>
 @stop

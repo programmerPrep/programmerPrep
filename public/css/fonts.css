@@ -3,9 +3,29 @@
     src: url('../fonts/Yunus/YunusH.otf');
 }
 
+.YunusNavbar{
+	font-family: Yunus;
+	font-size: 30px;
+	color: #000000;
+	list-style: none;
+}
+
 .Yunus{
 	font-family: Yunus;
-	font-size: 4rem;
+}
+
+@font-face {
+    font-family: Cavorting;
+    src: url('../fonts/Cavorting/Cavorting.otf');
+}
+
+.Cavorting{
+	font-family: Cavorting;
+}
+
+.CavortingTitle{
+	font-family: Cavorting;
+	font-size: 7vw;
 	font-style: bold;
-	color: black;
+	color: #424242;
 }
