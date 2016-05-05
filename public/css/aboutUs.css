@@ -1,0 +1,44 @@
+html{
+	height: 100%;
+}
+#aboutUsBody{
+	height: 100%;
+  	background-image: url('../img/notebookPaper.jpeg');
+    background-repeat: repeat;
+	background-attachment: fixed;
+    font-family: 'Just Another Hand', sans-serif;
+    text-align: center;
+
+    background-size: cover;
+	font-size: 2rem;
+}
+
+.us{
+	margin-bottom: 2.5%;
+}
+  	
+.picture{
+	border-radius: 50%;
+	box-shadow: 5px 5px 5px #888888;
+	color: white;
+	margin-top: 20px;
+	border: solid black 3px;
+	zoom: 110%;
+}
+
+.icon{
+	zoom: 20%;
+}
+
+.burney{
+	text-align: center;
+}
+.greg{
+	text-align: center;
+}
+.logan{
+	text-align: center;
+}
+.nick{
+	text-align: center;
+}

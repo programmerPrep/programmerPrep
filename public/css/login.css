@@ -1,5 +1,6 @@
 html{
 	height: 100vh;
+	width: 100vw;
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,13 +15,10 @@ legend{
 	margin-bottom: -13px;
 }
 #landingBody{
-/*  	background-image: url('../img/notebookBackground.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;*/
     background-position: center;
   	font-family: 'Copperplate Gothic Bold', sans-serif;
   	text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 button {
@@ -40,25 +38,16 @@ button {
 .title{
 	font-size: 6vw;
 	font-weight: bold;
-
 }
 
 .definition{
 	font-size: 1.6rem;
-	/*border: solid black 2px;*/
-	/*margin-bottom: 1px;*/
 }
 
 .invisible{
 	display: none;   
 }
 
-/*legend{
-	border: solid black 2px;
-	float: left;
-	padding-left: 1%;
-}
-*/
 form input[type=text], input[type=email], input[type=password]{
 	width: 64%;
 	text-align: center;
@@ -92,19 +81,16 @@ form input[type=text], input[type=email], input[type=password]{
 
 }
 .stickyNote{
+	position: relative;
 	zoom: 20%;
-	opacity: 1;
+	/*opacity: 1;*/
 	float: right;
-	margin-left: -0px;
+	/*padding: 40px;*/
+	margin-left: -10%;
 
 }
-/*#registerButton{
-	margin-right: 10%;
-}
-#loginButton{
-	margin-left: 10%;
-}*/
 
+/*over writing skeletons focus*/
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -120,7 +106,6 @@ select:focus {
   border-bottom: 3px solid black;
   outline: 0; 
 }
-.stickyNote:hover{
-}
+
 
 

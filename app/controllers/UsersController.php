@@ -40,22 +40,53 @@ class UsersController extends \BaseController {
 		}
 	}
 
+	public function get_content_from_github($url)
+	{
+
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL,$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, ['User-Agent: PlatonicPoohBear']); 
+		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,1);
+		
+		$content = curl_exec($ch);
+		curl_close($ch);
+		
+		return json_decode($content);
+	}
+
+
+	public function get_repos()
+	{
+			// This will search by the user's Github username.
+		$content = $this->get_content_from_github('https://api.github.com/search/repositories?q=user:PlatonicPoohBear');
+
+		return $content;
+	}
+
+
 	public function show($id)
 	{
 		$user = User::find($id);
 
-		if (Auth::check() && Auth::user()->id != $id){
+		if (!Auth::check()){
 			Session::flash('Not authenticated user so access is denied');
 			return Redirect::action('HomeController@showLogin');
 		}
-		$relationship = Relationship::where('user_id', '=', $user->id)->get();
 
-		if (!$user){
-			Session::flash('The user does not exist');
-			return View::make('login');
-		}
+		$content = $this->get_repos();
+		$content = $content->items[0];
+		
+		return array($user, $content);
 
-		return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship));
+		// $relationship = Relationship::where('user_id', '=', $user->id)->get();
+
+		// if (!$user){
+		// 	Session::flash('The user does not exist');
+		// 	return View::make('login');
+		// }
+
+		// return View::make('dashboard')->with(array('user' => $user, 'relationship' => $relationship));
 	}
 
 	public function create(){
@@ -98,44 +129,58 @@ class UsersController extends \BaseController {
         return Redirect::route('HomeController@showLogin');
     }
 
+
+    	// Need to modify edit controller. It should return the edit view, which should submit it's form
+    	// to the update function. Update function will change the database, then redirect to the profile page
+    	// for the user.
 	public function edit($id)
 	{
-		// goes to edit file
-        $username = post::find($username);
-        return View::make('user.edit')->make();
+		if (Auth::id() != $id) {
+	
+			return Redirect::back();
+		
+		} elseif (Auth::id() == $id) {
+			
+			$user = User::find($id);
+
+			return View::make('edit')->with('user', $user);
+		}
+
+		
 	}
 
 	public function showlogout(){
 		Auth::logout();
-		return Redirect::action('HomeController@login');
+		return Redirect::action('UsersController@showLogin');
 	}
 
-	public function store() {
+	public function update()
+	{
+		$validator = Validator::make(Input::all(), User::$rules);
 
-		$user = new User();
+		if ($validator->fails()) {
+			return Redirect::back()->withInput()->withErrors($validator);
+		} elseif (Input::file('img_url')->isValid()) {
 
-		$confirmation_code = str_random(30);
+			$user = User::find(Auth::id());
 
-		return $this->validation($user);
-		 $credentials = [
-            'username' => Input::get('username'),
-            'password' => Input::get('password'),
-            'confirmed' => 1
-        ];
-        $rules = [
-            'username' => 'required|exists:users',
-            'password' => 'required'
-        ];
-        if ( ! Auth::attempt($credentials))
-        {
-            return Redirect::back()
-                ->withInput()
-                ->withErrors([
-                    'credentials' => 'We were unable to sign you in.'
-                ]);
-        }
+			$user->first_name = Input::get('first_name');
+			$user->last_name  = Input::get('last_name');
+			$user->username   = Input::get('username');
+			$user->password   = Input::get('password');
+			$user->email      = Input::get('email');
+			$user->bio      = Input::get('bio');
+			$user->interests      = Input::get('interests');
+			$user->github_name      = Input::get('github_name');
+			$user->img_url      = Input::file('img_url')->move('img');
 
-        return Redirect::action('HomeController@dashboard');	
+			$user->save();
+
+			return Redirect::action('UsersController@show', Auth::id());
+			
+		}
+		
+		
 	}
 
 	public function validation($user)
@@ -167,4 +212,19 @@ class UsersController extends \BaseController {
 			}
 		}
 	}
+
+
+	public function index()
+    {
+            // We'll need this input on the page somewhere.
+        $search = Input::get('search');
+
+        if (is_null($search)) {
+            $mentors = DB::table('users')->where('is_mentor', 1)->orderBy('created_at', 'desc')->get();
+        } else {
+            $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
+        }
+
+        return View::make('mentor_index_test')->with('mentors', $mentors);
+    }
 }
