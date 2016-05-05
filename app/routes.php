@@ -29,14 +29,14 @@ Route::get('/aboutUs', 'DashboardController@aboutUs');
 
 
 	// Test route
-Route::get('/testrelations/{id}', 'DashboardController@show');
+// Route::get('/testrelations/{id}', 'DashboardController@show');
 
 
 	// Mentor index test route
 // Route::get('/mentorIndexTest', 'DashboardController@mentorIndex');
 
 
-Route::get('/dashboard', 'HomeController@showStatusPage');
+Route::get('/statusPage/{id}', 'DashboardController@show');
 
 Route::resource('/users','UsersController');
 
