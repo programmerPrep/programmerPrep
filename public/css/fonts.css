@@ -3,6 +3,13 @@
     src: url('../fonts/Yunus/YunusH.otf');
 }
 
+.YunusNavbar{
+	font-family: Yunus;
+	font-size: 30px;
+	color: #000000;
+	list-style: none;
+}
+
 .Yunus{
 	font-family: Yunus;
 	src: url('../fonts/Yunus/YunusH.otf');
@@ -11,10 +18,26 @@
 	color: black;
 }
 
-.JustAnotherHand{
+@font-face {
+    font-family: Cavorting;
+    src: url('../fonts/Cavorting/Cavorting.otf');
+}
+
+.Cavorting{
+	font-family: Cavorting;
+}
+
+.CavortingTitle{
+	font-family: Cavorting;
+	font-size: 7vw;
+	font-style: bold;
+	color: #424242;
+}
+
+/*.JustAnotherHand{
     font-family: JustAnotherHand;
     src: url('../fonts/Just_Another_Hand/JustAnotherHand.ttf');
     font-size: 4rem;
     font-style: bold;
     color: black;
-}
+}*/

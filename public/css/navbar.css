@@ -15,17 +15,16 @@
 }
 
 #wrapper.toggled {
-    padding-left: 200px;
+    padding-left: 150px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 200px;
+    left: 150px;
     width: 0;
-    height: 80%;
-    margin-top: 80px;
-    margin-left: -200px;
+    height: 60%;
+    margin-left: -150px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     overflow-y: auto;
@@ -37,7 +36,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 200px;
+    width: 150px;
 }
 
 #page-content-wrapper {
@@ -48,7 +47,7 @@
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -200px;
+    margin-right: -150px;
 }
 
 /* Sidebar Styles */
@@ -56,7 +55,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 200px;
+    width: 150px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -101,7 +100,8 @@
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 200px;
+        padding-left: 150px;
+
     }
 
     #wrapper.toggled {
@@ -109,7 +109,7 @@
     }
 
     #sidebar-wrapper {
-        width: 200px;
+        width: 150px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -127,6 +127,23 @@
     }
 }
 
-.marginAdjust{
-    margin-top: 34px;
+.marginAdjustMenuButton{
+    margin-right: 200px;
+}
+
+.navbarStyle{
+    margin-left: 0;
+    width: 150px;
+    height: 74vh;
+    /*margin-top: 115px;*/
+    position: fixed;
+    top: 115px;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: rgba(0,0,0,0.2);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
