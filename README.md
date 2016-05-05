@@ -1,9 +1,7 @@
-# programmerPrep
-Connecting aspiring Jr. Developers to Mentors in the industry
+#ProgrammerPrep README.md
 
--Burney intial commit
--Logan initial commit
--PoohBear initial commit
--PoohBear initial commit 
--Greg's initial commit
-on poohbear branch
+# Connecting aspiring junior developers to mentors
+
+- Logan's Initial Commit
+- Burney's Initial Commit
+

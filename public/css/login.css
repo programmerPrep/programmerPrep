@@ -1,0 +1,111 @@
+html{
+	height: 100vh;
+	width: 100vw;
+  	background-image: url('../img/notebookBackground.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*:focus {
+    outline: none !important;
+}
+span {
+	color: green;
+}
+legend{
+	margin-bottom: -13px;
+}
+#landingBody{
+    background-position: center;
+  	font-family: 'Copperplate Gothic Bold', sans-serif;
+  	text-align: center;
+    font-size: 2rem;
+}
+
+button {
+	border: solid black 2px;
+}
+
+.whiteBox{
+	background-color: white;
+	border-radius: 22px;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid black 10px;
+	max-width: 99%;
+}
+
+.title{
+	font-size: 6vw;
+	font-weight: bold;
+}
+
+.definition{
+	font-size: 1.6rem;
+}
+
+.invisible{
+	display: none;   
+}
+
+form input[type=text], input[type=email], input[type=password]{
+	width: 64%;
+	text-align: center;
+	border: none;
+	border-bottom: solid black 3px;
+	border-left: solid white 3px;
+	border-right: solid white 3px;
+	border-top: solid white 3px;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+.registration {
+	display: none;
+}
+
+.loginFormButtons {
+	margin-bottom: -16px;
+}
+
+#registerButton{
+	margin-right: 10%;
+}
+
+#loginButton {
+	margin-left: 10%;
+}
+
+#registerButton:active, #loginButton:active {
+	border: solid red 2px;
+
+}
+.stickyNote{
+	position: relative;
+	zoom: 20%;
+	/*opacity: 1;*/
+	float: right;
+	/*padding: 40px;*/
+	margin-left: -10%;
+
+}
+
+/*over writing skeletons focus*/
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-bottom: 3px solid black;
+  outline: 0; 
+}
+
+
+

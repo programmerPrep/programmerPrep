@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Yunus;
+    src: url('../fonts/Yunus/YunusH.otf');
+}
+
+.Yunus{
+	font-family: Yunus;
+	src: url('../fonts/Yunus/YunusH.otf');
+	font-size: 4rem;
+	font-style: bold;
+	color: black;
+}
+
+.JustAnotherHand{
+    font-family: JustAnotherHand;
+    src: url('../fonts/Just_Another_Hand/JustAnotherHand.ttf');
+    font-size: 4rem;
+    font-style: bold;
+    color: black;
+}
