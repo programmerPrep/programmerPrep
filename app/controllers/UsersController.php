@@ -34,7 +34,7 @@ class UsersController extends \BaseController {
 		}
 
 		if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))){
-			return Redirect::action('HomeController@showStatusPage');
+			return Redirect::action('DashboardController@show', Auth::id());
 		} else {
 			return Redirect::back()->withInput();
 		}
