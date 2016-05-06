@@ -1,4 +1,3 @@
-
 @extends('layouts.master')
 @section('content')
 
@@ -15,20 +14,7 @@
 			</ul>
 		</div>
 	<div class="CavortingTitle">programmerPrep</div>
-				
-	@foreach ($users as $user)
-    	<div class="statusInfo">
-    		{{ HTML::image('$users->img_url', '$users->first_name', array('class' => 'picture')) }}
-    		<ul>
-    			<li>{{ $user->first_name }}</li>
-    			<li>{{ $user->last_name }}</li>
-    			<li>{{ $user->interests }}</li>
-    		</ul>
-    	</div>
-    	
-	@endforeach
-	
-
-				
 </div>
+
+
 @stop
