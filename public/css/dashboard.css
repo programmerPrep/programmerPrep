@@ -3,7 +3,6 @@
 	flex-wrap: wrap;
 	height: 100vh;
 	width: 100vw;
-	/*position: fixed;*/
 	background-image: url('/img/notebookPaper.jpeg');
 	background-image: cover;
 	background-repeat: repeat-y;
@@ -41,4 +40,9 @@
 	width: 80%;
 	background: rgba(0,0,0,0.4);
 
+}
+
+.titleSizing{
+	height: 100vh;
+	width: 100vh;
 }
