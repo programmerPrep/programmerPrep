@@ -14,3 +14,27 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.searchStyle{
+    width: 150px;
+    height: 74vh;
+    /*margin-top: 115px;*/
+    position: fixed;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: rgba(0,0,0,0.2);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+.navLinkAdjusment{
+    left: 0;
+}

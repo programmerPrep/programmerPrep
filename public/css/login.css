@@ -1,10 +1,10 @@
-html{
+/*html{
 	height: 100vh;
 	width: 100vw;
   	background-image: url('../img/notebookBackground.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 *:focus {
     outline: none !important;
 }
