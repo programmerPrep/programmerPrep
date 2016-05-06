@@ -21,10 +21,10 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <!-- Fonts -->
-        <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
         
         <!-- Nav Bar -->
-        <link rel="stylesheet" type="text/css" href="./css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="/css/navbar.css">
 
         <!-- AboutUs css -->
         <link rel="stylesheet" type="text/css" href="/css/aboutUs.css">
@@ -49,6 +49,6 @@
         <!-- jQuery Validation CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
         <!-- frontEndValidation -->
-        <script src="js/frontEndValidation.js"></script>      
+        <script src="/js/frontEndValidation.js"></script>      
 </body>
 </html>
