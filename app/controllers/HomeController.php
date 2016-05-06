@@ -25,7 +25,8 @@ class HomeController extends BaseController {
 	// }
 	public function showStatusPage()
 	{
-		return View::make('dashboard');
+		$users = User::all();
+		return View::make('dashboard')->with(['users'=>$users]);
 	}
 	public function showAboutPage()
 	{
