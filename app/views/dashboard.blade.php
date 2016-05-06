@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('content')
 
-<<<<<<< HEAD
 <div id="dashboardBODY">
 	<div class="navbarStyle">
 			<ul class="YunusNavbar navLinkAdjustment">
