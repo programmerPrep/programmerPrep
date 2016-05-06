@@ -16,18 +16,25 @@
 }
 
 .searchStyle{
-    margin-left: 0;
     width: 150px;
     height: 74vh;
     /*margin-top: 115px;*/
     position: fixed;
-    top: 115px;
-    right: 0;
-    bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     background: rgba(0,0,0,0.2);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+.navLinkAdjusment{
+    left: 0;
 }

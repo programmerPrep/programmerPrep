@@ -1,7 +1,11 @@
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
+<div class="navbarStyle">
+			<ul class="YunusNavbar navLinkAdjustment">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Calendar</a></li>
+				<li><a href="#">Google+</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Mentors</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</div>
