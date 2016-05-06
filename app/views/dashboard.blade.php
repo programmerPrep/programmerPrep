@@ -27,7 +27,6 @@
     	</div>
     	
 	@endforeach
-	<?php var_dump($user) ?>
 	
 
 				
