@@ -44,7 +44,7 @@ Route::post('users/{id}','UsersController@update');
 
 // Route::get('/about', 'HomeController');
 
-// Route::get('/test', 'HomeController@showWelcome');
+Route::get('/test', 'UsersController@get_repos');
 
 Route::get('register/verify/{confirmationCode}', [
     'as' => 'confirmation_path',
