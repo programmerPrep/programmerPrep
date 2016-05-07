@@ -109,25 +109,31 @@ select:focus {
 
 .notificationMessage{
   width: 100%;
-  margin-bottom: 8px;
+  /*margin-bottom: 0px;*/
   display: block;
-  position: relative;
+  text-shadow: 0.5px 0.5px black;
+  text-align: center;
+  position: absolute;
+   position: fixed;
+    top:0;
+    left:0;
+    width:100%;
   border-left: 4px solid;
-  right: -50px;
+  /*right: -50px;*/
   /*opacity: 0;*/
-/*  line-height: 1;*/
+  /*  line-height: 1;*/
   padding: 0;
   /*transition: right 400ms, opacity 400ms, line-height 300ms 100ms, padding 300ms 100ms;*/
   display: table;
 }
 
 #successMessage{
-  color: #fff;
-  border-color: #539753;
-  background-color: #8fbf2f;
+  color: black;
+  border-color: black;
+  background-color: #1DC756;
 }
 #errorMessage{
-  color: #fff;
-  border-color: #dd6137;
+  color: black;
+  border-color: black;
   background-color: #f7931d;
 }
