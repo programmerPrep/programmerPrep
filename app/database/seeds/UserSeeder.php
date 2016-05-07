@@ -10,7 +10,7 @@ class UserSeeder extends Seeder
         $user->first_name = 'Logan';
         $user->last_name = 'Farmer';
         $user->email = 'thevisagiftcard@gmail.com';
-        $user->interests = 'PHP, JavaScript, C#, Boo';
+        $user->interests = 'PHP, JavaScript, C#, Boo, LAMP+J, MySQL, Python, Ruby on Rails';
         $user->password = 'logan';
         $user->img_url = '/img/logan.jpg';
         $user->is_mentor = 1;
@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
         $user1->first_name = 'Nick';
         $user1->last_name = 'Vrzalik';
         $user1->email = 'nicholas.vrzalik@hotmail.com';
-        $user1->interests = 'PHP, JavaScript, C#, Boo';
+        $user1->interests = 'PHP, JavaScript, C#, Boo, LAMP+J, MySQL, Python, Ruby on Rails';
         $user1->password = 'nick';
         $user1->img_url = '/img/nick.jpg';
         $user1->github_name = 'PlatonicPoohBear';
@@ -61,7 +61,7 @@ class UserSeeder extends Seeder
         $user4->last_name = 'Leffew';
         $user4->email = 'tleffew1994@gmail.com';
         $user4->password = 'tomas';
-        $user4->img_url = '/img/Penthious_profile_img.png';
+        $user4->img_url = '/img/thomas.jpeg';
         $user4->github_name = 'Penthious';
         $user4->confirmed = 1;
         $user4->save();

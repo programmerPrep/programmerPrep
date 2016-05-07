@@ -1,6 +1,11 @@
 @extends('layouts.master')
 @section('content')
 
+<!-- <?php 
+	$interstsArray = explode(',' , $user->interests);
+
+?> -->
+
 <div id="dashboardBODY">
 	<div class="navbarStyle">
 			<ul class="YunusNavbar navLinkAdjustment">
@@ -20,9 +25,9 @@
 			<div class="four columns">
 				@foreach ($pending as $user)
 					<div class="note yellow">
-						{{ HTML::image($user->img_url, $user->first_name, array('class' => 'statusPic')) }}
-	  					<div class="quote-container">
-	    					
+						
+	  					<div class="quote-container">d
+	    					{{ HTML::image($user->img_url, $user->first_name, array('class' => 'statusPic')) }}
 	    					{{ $user->interests }}
 	    					<div class="author yunusStatus">{{ $user->first_name }} {{ $user->last_name }}</div>
 	  					</div>
