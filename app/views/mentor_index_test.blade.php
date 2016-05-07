@@ -19,19 +19,21 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="ten columns">
+			
 				@foreach ($mentors as $mentor)
-					<?php $interestsArray = explode(',' , $mentor->interests);?>
-					<div class="note yellow">
-            			{{ HTML::image($mentor->img_url, $mentor->first_name, array('class' => 'statusPic')) }}
-            			<div class="quote-container">
-                			{{{ $interestsArray[0] }}}, {{{ $interestsArray[1] }}}, {{{ $interestsArray[2] }}}...
-                			<div class="author yunusStatus">
-                    			{{ $mentor->first_name }} {{ $mentor->last_name }}
-                    			<a href="mailto:{{ $mentor->email }}?Subject='programmerPrep!'" target="_top"><img class="icon" src="/icons/mail.png"></a>
-                			</div>
-            			</div>
-        			</div>      	
+					<div class="five columns">
+						<?php $interestsArray = explode(',' , $mentor->interests);?>
+						<div class="note yellow">
+            				{{ HTML::image($mentor->img_url, $mentor->first_name, array('class' => 'statusPic')) }}
+            				<div class="quote-container">
+                				{{{ $interestsArray[0] }}}, {{{ $interestsArray[1] }}}, {{{ $interestsArray[2] }}}...
+                				<div class="author yunusStatus">
+                    				{{ $mentor->first_name }} {{ $mentor->last_name }}
+                    				<a href="mailto:{{ $mentor->email }}?Subject='programmerPrep!'" target="_top"><img class="icon" src="/icons/mail.png"></a>
+                				</div>
+            				</div>
+        				</div>
+        			</div>
 				@endforeach
 			</div>
 		</div>
