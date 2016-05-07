@@ -61,7 +61,9 @@ class UsersController extends \BaseController {
 			// This will search by the user's Github username.
 		$content = $this->get_content_from_github('https://api.github.com/search/repositories?q=user:PlatonicPoohBear');
 
-		return $content;
+		// return $content;
+
+		return View::make('test')->with('content', $content);
 	}
 
 
@@ -92,6 +94,7 @@ class UsersController extends \BaseController {
 	public function create(){
 		$validator = Validator::make(Input::all(), User::$loginRegistrationRules);
 		if ($validator->fails()){
+			Session::flash('errorMessage', "Invalid input.");
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
@@ -102,7 +105,7 @@ class UsersController extends \BaseController {
 		$user->save();
 
 
-		// Why not Auth::attempt with the created user and send them to their newly created dashboard?
+		Session::flash('successMessage', "Successfully registered. Please login.");
 		
         return Redirect::back();
 	}

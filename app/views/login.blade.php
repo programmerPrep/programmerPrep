@@ -5,7 +5,7 @@
 	<div class="container"> 
 		<div class="whiteBox">			
 			<div class="title"> programmerPrep </div>
-			<p class="definition">Connecting aspiring Jr. Developers to Mentors in the industry</p>
+			<p class="definition">Connecting Jr. Developers to their personal Mentors</p>
 
 			<!-- login -->
 
@@ -26,6 +26,9 @@
 				{{-- <input id="email" name="email" type="email" placeholder="emailAddress"> --}}
 				{{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'email', 'id' => 'email')) }}
 				{{ Form::text('github', null, array('class' => 'form-control', 'placeholder' => 'github username', 'id' => 'githubUsername')) }}
+				<br>
+				<input type="checkbox" name="isMentor" value="isMentor" id="isMentorCheckbox"> I am a Mentor
+				<br>
 			</div>
 			<div class="loginFormButtons">
 				<button type="button" id="registerButton" class="loginFormButton">Register</button>
