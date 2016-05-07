@@ -92,7 +92,7 @@ class UsersController extends \BaseController {
 	public function create(){
 		$validator = Validator::make(Input::all(), User::$loginRegistrationRules);
 		if ($validator->fails()){
-			Session::flash('errorMessage', "Invalid input.")
+			Session::flash('errorMessage', "Invalid input.");
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
@@ -103,7 +103,7 @@ class UsersController extends \BaseController {
 		$user->save();
 
 
-		Session::flash('successMessage', "Successfully registered. Please login.")
+		Session::flash('successMessage', "Successfully registered. Please login.");
 		
         return Redirect::back();
 	}
