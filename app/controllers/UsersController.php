@@ -149,7 +149,7 @@ class UsersController extends \BaseController {
 		
 	}
 
-	public function showlogout(){
+	public function showLogout(){
 		Auth::logout();
 		return Redirect::action('UsersController@showLogin');
 	}
