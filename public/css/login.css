@@ -114,10 +114,10 @@ select:focus {
   position: relative;
   border-left: 4px solid;
   right: -50px;
-  opacity: 0;
-  line-height: 1;
+  /*opacity: 0;*/
+/*  line-height: 1;*/
   padding: 0;
-  transition: right 400ms, opacity 400ms, line-height 300ms 100ms, padding 300ms 100ms;
+  /*transition: right 400ms, opacity 400ms, line-height 300ms 100ms, padding 300ms 100ms;*/
   display: table;
 }
 

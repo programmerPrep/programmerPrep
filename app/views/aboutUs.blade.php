@@ -56,6 +56,7 @@
 		We all have the same mantra: Eat, Sleep, Code, Repeat but what's there to steer us in the right direction career wise? Who do we turn to incase of a specific issue? How do we get our foot in the door at that one place? So we made a hub for that. 
 
 		The purpose is to aquire a mentor in the community to usher you in. That's why we created programmerPrep. Day-in and day-out for two weeks the four of us worked the front and the back of this web-application to create a truely one of a kind software as a service.
+		<!-- 
 ---------------------------------------------------------------------------------------------------
 		The creation of programmerPrep revolved around two main goals. One, A way to give back to the community that spawned us, and two, providing additional education to the masses. We all have the same 
 
@@ -69,12 +70,12 @@
 
 		In the end, it’s all about you. As we evolve and educate ourselves, we will seek to perfect this safe
 
-		Not just for the four of us, but for the everyone that wanted to join in the "skill pass down" that the tech scene is today.
+		Not just for the four of us, but for the everyone that wanted to join in the "skill pass down" that the tech scene is today. -->
 	</div>
 </body>
 @stop
 
-describe this web application
+<!-- describe this web application
 	software as a service - 
 
 	programmerPrep was created with one main goal in mind and that was to create a web-application to connect developers together.
@@ -95,7 +96,7 @@ talks about the sites technologies
 	 jQuery
 
 How we made it
-	Eat sleep code repeat
+	Eat sleep code repeat -->
 
 
 
