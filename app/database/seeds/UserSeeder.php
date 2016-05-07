@@ -12,7 +12,7 @@ class UserSeeder extends Seeder
         $user->email = 'thevisagiftcard@gmail.com';
         $user->interests = 'PHP, JavaScript, C#, Boo';
         $user->password = 'logan';
-        $user->img_url = '/img/Shark_profile_img.png';
+        $user->img_url = '/img/logan.jpg';
         $user->is_mentor = 1;
         $user->bio = 'A million dollars isnt cool. You know what is? A billion dollars.';
         $user->github_name = 'yungshark';
@@ -24,8 +24,9 @@ class UserSeeder extends Seeder
         $user1->first_name = 'Nick';
         $user1->last_name = 'Vrzalik';
         $user1->email = 'nicholas.vrzalik@hotmail.com';
+        $user1->interests = 'PHP, JavaScript, C#, Boo';
         $user1->password = 'nick';
-        $user1->img_url = '/img/PlatonicPoohBear_profile_img.png';
+        $user1->img_url = '/img/nick.jpg';
         $user1->github_name = 'PlatonicPoohBear';
         $user1->confirmed = 1;
         $user1->save();
@@ -35,8 +36,9 @@ class UserSeeder extends Seeder
         $user2->first_name = 'Burney';
         $user2->last_name = 'Burney';
         $user2->email = 'burney318@gmail.com';
+        $user2->interests = 'PHP, JavaScript, C#, Boo';
         $user2->password = 'burney';
-        $user2->img_url = '/img/burneyburney_profile_img.png';
+        $user2->img_url = '/img/burney.jpg';
         $user2->github_name = 'burneyburney';
         $user2->confirmed = 1;
         $user2->save();
@@ -46,8 +48,9 @@ class UserSeeder extends Seeder
         $user3->first_name = 'Gregory';
         $user3->last_name = 'Bickham';
         $user3->email = 'gregory.bickham@gmail.com';
+        $user3->interests = 'PHP, JavaScript, C#, Boo';
         $user3->password = 'greg';
-        $user3->img_url = '/img/Gregory-Bickham_profile_img.png';
+        $user3->img_url = '/img/greg.jpg';
         $user3->github_name = 'Gregory-Bickham';
         $user3->confirmed = 1;
         $user3->save();

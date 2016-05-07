@@ -14,7 +14,34 @@
 			</ul>
 		</div>
 	<div class="CavortingTitle">programmerPrep</div>
-</div>
 
+	<div class="container">
+		<div class="row">
+			<div class="four columns">
+				@foreach ($pending as $user)
+					<div class="note yellow">
+						{{ HTML::image($user->img_url, $user->first_name, array('class' => 'statusPic')) }}
+	  					<div class="quote-container">
+	    					
+	    					{{ $user->interests }}
+	    					<div class="author yunusStatus">{{ $user->first_name }} {{ $user->last_name }}</div>
+	  					</div>
+					</div>    	
+				@endforeach
+			</div>
+			<div class="four columns">
+				@foreach ($active as $user)
+	    			<div class="note yellow">
+	    				{{ HTML::image($user->img_url, $user->first_name, array('class' => 'statusPic')) }}
+	  					<div class="quote-container">
+	    					{{ $user->interests }}
+	    					<div class="author yunusStatus">{{ $user->first_name }} {{ $user->last_name }}</div>
+	  					</div>
+					</div> 
+				@endforeach
+			</div>
+		</div>
+	</div>
+</div>
 
 @stop
