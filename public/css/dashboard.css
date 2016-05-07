@@ -1,3 +1,7 @@
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
 #dashboardBODY{
 	display: flex;
 	flex-wrap: wrap;
@@ -13,36 +17,69 @@
 
 }
 
-.statusPage{
-	display: flex;
-	flex-wrap: wrap;
-	height: 70vh;
-	width: 80vw;
-	background: rgba(0,0,0,0.2);
-}
-
 .statusPic{
-	height: 35%;
-	width: 10%;
+	height: 50%;
+	width: 20%;
 	border-radius: 50%;
 	box-shadow: 5px 5px 5px #888888;
 	color: white;
 	margin-top: 20px;
 	margin-left: 15px;
+	margin-right: 80px;
 	border: solid black 3px;
 	float: left;
+	display: inline-block;
 }
 
 .statusInfo{
 	margin-left: 5px;
 	margin-bottom: 5px;
-	height: 150px;
+	height: 180px;
 	width: 80%;
 	background: rgba(0,0,0,0.4);
 
 }
 
+.statusList{
+	list-style: none;
+	margin-left: 15%;
+}
 .titleSizing{
 	height: 100vh;
 	width: 100vh;
 }
+
+.quote-container {
+  margin-top: 50px;
+  padding: 5px;
+  position: relative;
+}
+
+.note {
+  color: #333;
+  position: relative;
+  clear: both;
+  width: 300px;
+  height: 300px;
+  font-family: Yunus;
+  font-size: 30px;
+  box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+}
+ 
+.note .author {
+  display: block;
+  /*margin: 40px 0 0 0;*/
+  
+  text-align: right;
+
+}
+
+.yellow {
+  background: #eae672;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
