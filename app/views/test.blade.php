@@ -3,11 +3,10 @@
     <title>test</title>
 </head>
 <body>
-    <?php var_dump($pending) ?>
-    pending
     
-    <?php var_dump($active) ?>
-    active
+    
+    <?php var_dump($content) ?>
+    
     
 </body>
 </html>
