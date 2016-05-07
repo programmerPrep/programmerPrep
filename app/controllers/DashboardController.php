@@ -2,6 +2,14 @@
 
 class DashboardController extends \BaseController {
 
+    public function __construct()
+    {
+        // require csrf token for all post, delete, and put actions
+        $this->beforeFilter('auth', array('only' => array('show')));
+    }
+
+
+
     public function show($id)
     {
         $user = User::find($id);
