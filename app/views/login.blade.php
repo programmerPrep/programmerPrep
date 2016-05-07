@@ -5,7 +5,7 @@
 	<div class="container"> 
 		<div class="whiteBox">			
 			<div class="title"> programmerPrep </div>
-			<p class="definition">Connecting aspiring Jr. Developers to Mentors in the industry</p>
+			<p class="definition">Connecting Jr. Developers to their personal Mentors</p>
 
 			<!-- login -->
 
