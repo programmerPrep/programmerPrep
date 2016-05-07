@@ -61,7 +61,9 @@ class UsersController extends \BaseController {
 			// This will search by the user's Github username.
 		$content = $this->get_content_from_github('https://api.github.com/search/repositories?q=user:PlatonicPoohBear');
 
-		return $content;
+		// return $content;
+
+		return View::make('test')->with('content', $content);
 	}
 
 
