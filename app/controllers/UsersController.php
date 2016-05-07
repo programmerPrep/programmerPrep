@@ -92,6 +92,7 @@ class UsersController extends \BaseController {
 	public function create(){
 		$validator = Validator::make(Input::all(), User::$loginRegistrationRules);
 		if ($validator->fails()){
+			Session::flash('errorMessage', "Invalid input.");
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
@@ -102,7 +103,7 @@ class UsersController extends \BaseController {
 		$user->save();
 
 
-		// Why not Auth::attempt with the created user and send them to their newly created dashboard?
+		Session::flash('successMessage', "Successfully registered. Please login.");
 		
         return Redirect::back();
 	}
