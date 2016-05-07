@@ -5,9 +5,6 @@ html{
     background-repeat: no-repeat;
     background-size: cover;    
 }
-
-
-
 *:focus {
     outline: none !important;
 }
@@ -110,3 +107,27 @@ select:focus {
   outline: 0; 
 }
 
+.notificationMessage{
+  width: 100%;
+  margin-bottom: 8px;
+  display: block;
+  position: relative;
+  border-left: 4px solid;
+  right: -50px;
+  opacity: 0;
+  line-height: 1;
+  padding: 0;
+  transition: right 400ms, opacity 400ms, line-height 300ms 100ms, padding 300ms 100ms;
+  display: table;
+}
+
+#successMessage{
+  color: #fff;
+  border-color: #539753;
+  background-color: #8fbf2f;
+}
+#errorMessage{
+  color: #fff;
+  border-color: #dd6137;
+  background-color: #f7931d;
+}
