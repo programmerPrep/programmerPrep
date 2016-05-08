@@ -29,7 +29,7 @@ class UsersController extends \BaseController {
 		$validator = Validator::make(Input::all(), User::$loginRules);
 
 		if ($validator->fails()){
-            Session::flash('errorMessage', 'Username or password is missing');
+            Session::flash('errorMessage', 'Username or password is missing: Reminder: Username cannot exceed 20 characters');
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
@@ -46,7 +46,7 @@ class UsersController extends \BaseController {
 		$ch = curl_init();
 		curl_setopt($ch,CURLOPT_URL,$url);
 		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, ['User-Agent: PlatonicPoohBear']); 
+		curl_setopt($ch,CURLOPT_HTTPHEADER, ['User-Agent: PlatonicPoohBear']); 
 		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,1);
 		
 		$content = curl_exec($ch);
