@@ -27,6 +27,8 @@ Route::get('/logout', 'UsersController@showLogout');
 
 Route::get('/aboutUs', 'DashboardController@aboutUs');
 
+Route::get('/users/mentorRequest/{mentorId}', 'UsersController@mentorRequest');
+
 
 	// Test route
 // Route::get('/testrelations/{id}', 'DashboardController@show');
