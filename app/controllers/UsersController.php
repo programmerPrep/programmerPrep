@@ -234,6 +234,15 @@ class UsersController extends \BaseController {
 
     public function mentorRequest($mentorId)
     {
+    	$relationship = DB::table('relationships')->where('mentor_id', $mentorId)->where('student_id', Auth::id())->get();
+
+    	if ($relationship) {
+    		Session::flash('errorMessage', 'Already requested this mentor.');
+    		return Redirect::back();
+
+    	}
+
+
     	$relationship = new Relationship();
     	$relationship->mentor_id = $mentorId;
     	$relationship->student_id = Auth::id();
