@@ -230,4 +230,18 @@ class UsersController extends \BaseController {
 
         return View::make('mentor_index_test')->with('mentors', $mentors);
     }
+
+
+    public function mentorRequest($mentorId)
+    {
+    	$relationship = new Relationship();
+    	$relationship->mentor_id = $mentorId;
+    	$relationship->student_id = Auth::id();
+    	$relationship->is_pending = 1;
+
+    	$relationship->save();
+
+    	return Redirect::action('DashboardController@show', Auth::id());
+
+    }
 }
