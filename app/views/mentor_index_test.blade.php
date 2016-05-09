@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-
+@include ('partials.navbar')
 
 
 <div id="dashboardBODY">
@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 				@foreach ($mentors as $mentor)
-					<div class="five columns">
+					<div class="six columns">
 						<?php $interestsArray = explode(',' , $mentor->interests);?>
 						<div class="note yellow">
 						<a href="{{{ action('UsersController@mentorRequest', $mentor->id) }}}" target="_top">

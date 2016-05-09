@@ -1,15 +1,12 @@
 @extends('layouts.master')
 @section('content')
 <main>
-
 <body id="dashboardBODY">
-
 	@include ('partials.navbar')
 	<div class="CavortingEdit"> Edit Your Profile </div>
-	<div class="container"> 			
-			
-				{{ Form::open(array('action' => 'UsersController@update', 'class' => 'form-signin', 'files' => true)) }}
-				<div class="loginField">
+	<div class="container"> 						
+				{{ Form::open(array('action' => 'UsersController@update', 'class' => 'w', 'files' => true)) }}
+				<!-- <div class="loginField"> -->
 					{{ Form::text('username', $user->username, array('class' => 'form-control', 'placeholder' => 'username', 'id'=>'username')) }}
 					{{ $errors->first('username', '<span class="help-block">:message</span>') }}
 					{{ Form::text('email', $user->email, array('class' => 'form-control', 'placeholder' => 'email', 'id'=>'email')) }}
@@ -35,7 +32,6 @@
 						</div>
 					{{ Form::submit('Sign in', array('class' => 'btn-log')); }}
 				<!-- stickyNote -->
-				
 				</div>
 			</div>
 		</div>

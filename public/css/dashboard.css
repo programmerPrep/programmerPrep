@@ -74,9 +74,11 @@ body, html {
 .note .author {
   display: block;
   /*margin: 40px 0 0 0;*/
-  
   text-align: center;
+}
 
+.author{
+	margin-top: -14px
 }
 
 .yellow {
@@ -86,5 +88,11 @@ body, html {
   -o-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
   transform: rotate(2deg);
+  margin: 10%;
 }
 
+#pending, #active{
+	color: red;
+	font-size: 2rem;
+	float: left;
+}

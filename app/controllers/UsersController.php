@@ -79,7 +79,8 @@ class UsersController extends \BaseController {
 		$content = $this->get_repos();
 		$content = $content->items[0];
 		
-		return array($user, $content);
+		return View::make('profile')->with(array('user' => $user, 'content' => $content));
+		// return array($user, $content);
 
 		// $relationship = Relationship::where('user_id', '=', $user->id)->get();
 
