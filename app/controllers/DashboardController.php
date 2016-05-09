@@ -61,7 +61,7 @@ class DashboardController extends \BaseController {
             // var_dump($user->mentors());
             // var_dump($relationship = Relationship::where('student_id', '=', $id)->get());
         }
-        return View::make('dashboard')->with(array('pending' => $pending, 'active' => $active));
+        return View::make('dashboard')->with(array('pending' => $pending, 'active' => $active, 'user' => $user));
 
     }
 
@@ -82,7 +82,8 @@ class DashboardController extends \BaseController {
 
     public function aboutUs()
     {
-        return View::make('aboutUs');
+        $user = Auth::user();
+        return View::make('aboutUs')->with(array('user' => $user));
     }
 }
 

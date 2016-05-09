@@ -1,8 +1,33 @@
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.addIcon{
+    height: 25px;
+    width: 25px;
+    /*margin-bottom: 2px;*/
+    /*float: left;*/
+    margin-left: -99px;
+
+}
 .navbarStyle{
     margin-left: 0;
+    margin-right: 10px;
     width: 150px;
     height: 74vh;
-    /*margin-top: 115px;*/
+    text-align: center;
     position: fixed;
     top: 115px;
     left: 0;

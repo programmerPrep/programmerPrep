@@ -27,6 +27,8 @@ Route::get('/logout', 'UsersController@showLogout');
 
 Route::get('/aboutUs', 'DashboardController@aboutUs');
 
+Route::get('/users/mentorRequest/{mentorId}', 'UsersController@mentorRequest');
+
 
 	// Test route
 // Route::get('/testrelations/{id}', 'DashboardController@show');
@@ -44,7 +46,7 @@ Route::post('users/{id}','UsersController@update');
 
 // Route::get('/about', 'HomeController');
 
-// Route::get('/test', 'HomeController@showWelcome');
+Route::get('/test', 'UsersController@get_repos');
 
 Route::get('register/verify/{confirmationCode}', [
     'as' => 'confirmation_path',
