@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>programmerPrep</title>
-        
         <!-- normalize CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
         <!-- skeleton CDN -->
