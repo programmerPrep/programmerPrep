@@ -29,6 +29,8 @@ Route::get('/aboutUs', 'DashboardController@aboutUs');
 
 Route::get('/users/mentorRequest/{mentorId}', 'UsersController@mentorRequest');
 
+Route::get('/users/acceptRequest/{studentId}', 'UsersController@acceptRequest');
+
 
 	// Test route
 // Route::get('/testrelations/{id}', 'DashboardController@show');

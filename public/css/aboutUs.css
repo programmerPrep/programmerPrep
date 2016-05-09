@@ -42,3 +42,6 @@ html{
 .nick{
 	text-align: center;
 }
+#aboutUsParagraph{
+	line-height: 170%;
+}
