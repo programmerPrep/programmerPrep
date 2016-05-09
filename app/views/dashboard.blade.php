@@ -2,10 +2,12 @@
 @section('content')
 
 
-
 <div id="dashboardBODY">
 	@include ('partials.navbar')
 	<div class="CavortingTitle">programmerPrep</div>
+	 <div id="helloUsername">
+		Hello, <?php echo Auth::user()->username; ?> !
+	</div>
 
 	<div class="container">
 		<div class="row">
@@ -42,5 +44,6 @@
 		</div>
 	</div>
 </div>
+	 	
 
 @stop
