@@ -29,7 +29,7 @@ class UsersController extends \BaseController {
 		$validator = Validator::make(Input::all(), User::$loginRules);
 
 		if ($validator->fails()){
-            Session::flash('errorMessage', 'Username or password is missing');
+            Session::flash('errorMessage', 'Username or password is missing: Reminder: Username cannot exceed 20 characters');
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
@@ -46,7 +46,7 @@ class UsersController extends \BaseController {
 		$ch = curl_init();
 		curl_setopt($ch,CURLOPT_URL,$url);
 		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, ['User-Agent: PlatonicPoohBear']); 
+		curl_setopt($ch,CURLOPT_HTTPHEADER, ['User-Agent: PlatonicPoohBear']); 
 		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,1);
 		
 		$content = curl_exec($ch);
@@ -229,5 +229,28 @@ class UsersController extends \BaseController {
         }
 
         return View::make('mentor_index_test')->with('mentors', $mentors);
+    }
+
+
+    public function mentorRequest($mentorId)
+    {
+    	$relationship = DB::table('relationships')->where('mentor_id', $mentorId)->where('student_id', Auth::id())->get();
+
+    	if ($relationship) {
+    		Session::flash('errorMessage', 'Already requested this mentor.');
+    		return Redirect::back();
+
+    	}
+
+
+    	$relationship = new Relationship();
+    	$relationship->mentor_id = $mentorId;
+    	$relationship->student_id = Auth::id();
+    	$relationship->is_pending = 1;
+
+    	$relationship->save();
+
+    	return Redirect::action('DashboardController@show', Auth::id());
+
     }
 }

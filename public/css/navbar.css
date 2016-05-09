@@ -17,7 +17,10 @@
 .addIcon{
     height: 25px;
     width: 25px;
-    float: left;
+    /*margin-bottom: 2px;*/
+    /*float: left;*/
+    margin-left: -99px;
+
 }
 .navbarStyle{
     margin-left: 0;
