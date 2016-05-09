@@ -99,3 +99,8 @@ body, html {
 	margin: 5px;
 }
 
+.floatLeft{
+	float: left;
+	z-index: 1000;
+}
+
