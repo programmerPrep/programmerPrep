@@ -78,7 +78,7 @@ class UserSeeder extends Seeder
         $user5->email = 'bob@gmail.com';
         $user5->interests = 'C#, Boo, Cobol, .NET, Assembly';
         $user5->password = 'bobberson';
-        $user5->img_url = '/img/Bob_profile_img.png';
+        $user5->img_url = 'img/phpAu4hV4';
         $user5->is_mentor = 1;
         $user5->bio = 'A million dollars isnt cool. You know what is? A billion dollars.';
         $user5->github_name = 'Bobby';
