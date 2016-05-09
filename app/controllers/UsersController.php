@@ -224,7 +224,7 @@ class UsersController extends \BaseController {
         $search = Input::get('search');
 
         if (is_null($search)) {
-            $mentors = DB::table('users')->where('is_mentor', 1)->orderBy('created_at', 'desc')->get();
+            $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'NOT LIKE', null)->orderBy('created_at', 'desc')->get();
         } else {
             $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
         }
