@@ -5,6 +5,7 @@
 <div id="dashboardBODY">
 	@include ('partials.navbar')
 	<div class="CavortingTitle">Status Page</div>
+	<div class="nameDate">{{ $user->first_name}} {{ $user->last_name }} <br> {{ $user->github_name }} <br> {{ $user->updated_at }}</div>
 	<div class="container">
 		<div class="row">
 			<div class="six columns">
