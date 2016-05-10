@@ -20,8 +20,8 @@ body, html {
 }
 
 .statusPic{
-	height: 50%;
-	width: 50%;
+	height: 45%;
+	width: 45%;
 	border-radius: 50%;
 	box-shadow: 5px 5px 5px #888888;
 	color: white;
@@ -98,6 +98,7 @@ body, html {
 }
 
 .subIcon{
+	background-image: url('/icons/glyphicons/png/glyphicons-193-remove-sign.png');
 	height: 18px;
 	width: 18px;
 	float: left;
@@ -113,5 +114,18 @@ body, html {
 #pending, #active{
 	color: red;
 	font-size: 2rem;
-	float: left;
+	float: right;
+	margin: 1%;
+}
+
+#active{
+	color: green;
+	font-size: 2rem;
+	float: right;
+	margin: 1%;
+}
+
+.align-left {
+	text-align: left;
+	margin: 1%;
 }
