@@ -20,12 +20,12 @@ body, html {
 }
 
 .statusPic{
-	height: 50%;
-	width: 50%;
+	height: 45%;
+	width: 45%;
 	border-radius: 50%;
 	box-shadow: 5px 5px 5px #888888;
 	color: white;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: 25%;
 	margin-right: 80px;
 	border: solid black 3px;
@@ -91,8 +91,48 @@ body, html {
   margin: 10%;
 }
 
-#pending, #active{
+.addIcon{
+    height: 25px;
+    width: 25px;
+    float: left;
+}
+
+.subIcon{
+	background-image: url('/icons/glyphicons/png/glyphicons-193-remove-sign.png');
+	height: 18px;
+	width: 18px;
+	float: left;
+	margin: 5px;
+}
+
+.floatLeft{
+	float: left;
+	z-index: 1000;
+}
+
+
+#pending{
 	color: red;
 	font-size: 2rem;
-	float: left;
+	float: right;
+	margin: 1%;
+}
+
+#active{
+	color: green;
+	font-size: 2rem;
+	float: right;
+	margin: 1%;
+}
+
+.align-left {
+	text-align: left;
+	margin: 1%;
+}
+
+.nameDate{
+	float: right;
+	text-align: right;
+	font-family: Yunus;
+	font-size: 1.8em;
 }

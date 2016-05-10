@@ -1,15 +1,17 @@
-/*#editBody{
-	height: 100%;
-  	background-image: url('../../img/notebookPaper.jpeg');
-    background-repeat: repeat;
-	background-attachment: fixed;
-    font-family: 'Copperplate Gothic Bold', sans-serif;
-    text-align: center;
-    background-size: cover;
-	font-size: 2rem;
-	background-color: green;
+.loginStyle{
+	height: auto;
+	width: 70%;
+	background: rgba(0,0,0,0.2);
 }
-*/
-.editBody{
+
+.formMarginAdjust{
+	margin-left: 115px;
+}
+
+.adjustFormMarginTop{
+	margin-top: 15px;
+}
+
+.buttonColor{
 	background-color: green;
 }
