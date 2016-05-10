@@ -27,7 +27,7 @@
     z-index: 1000; /* so the menu or its navicon stays above all content */
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.1);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     border: solid black 3px;

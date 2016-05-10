@@ -27,6 +27,8 @@
         <link rel="stylesheet" type="text/css" href="/css/edit.css">
         <!-- Nav Bar -->
         <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+        <!-- Profile -->
+        <link rel="stylesheet" type="text/css" href="/css/profile.css">
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <!-- jQuery Validation CDN -->
