@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
 @include ('partials.navbar')
-<body id="profileBody">
+<div id="dashboardBODY">
+	<div class="CavortingTitle">Profile Page</div>
 
-	stuff
 
 
 
