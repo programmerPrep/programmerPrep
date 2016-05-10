@@ -2,6 +2,9 @@
 	height: auto;
 	width: 70%;
 	background: rgba(0,0,0,0.2);
+	border: solid black 3px;
+	border-radius: 5px;
+
 }
 
 .formMarginAdjust{
