@@ -30,9 +30,9 @@
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <!-- jQuery Validation CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script> -->
         <!-- frontEndValidation -->
-        <script src="/js/frontEndValidation.js"></script>      
+        <!-- <script src="/js/frontEndValidation.js"></script>       -->
 
         @yield('top-script')
     </head>

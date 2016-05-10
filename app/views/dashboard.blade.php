@@ -4,7 +4,7 @@
 
 <div id="dashboardBODY">
 	@include ('partials.navbar')
-	<div class="CavortingTitle">programmerPrep</div>
+	<div class="CavortingTitle">Status Page</div>
 	<div class="container">
 		<div class="row">
 			<div class="six columns">
