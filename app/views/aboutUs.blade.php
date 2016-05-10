@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <main>
+
 	<!-- <div class="container"> -->
 		<div class="row us">
 			<!-- 4 pictures of us -->
