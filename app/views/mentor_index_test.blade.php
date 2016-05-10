@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-
+@include ('partials.navbar')
 
 
 <div id="dashboardBODY">
@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="row">
 				@foreach ($mentors as $mentor)
-					<div class="five columns">
+					<div class="six columns">
 						<?php $interestsArray = explode(',' , $mentor->interests);?>
 						<div class="note yellow">
 						<a href="#" class="button button-primary floatLeft"><!-- <img class="addIcon" src="/icons/glyphicons/png/glyphicons-191-plus-sign.png" alt="Add Mentor!"> -->Test</a>

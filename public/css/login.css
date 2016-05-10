@@ -83,9 +83,7 @@ form input[type=text], input[type=email], input[type=password]{
 .stickyNote{
 	position: relative;
 	zoom: 20%;
-	/*opacity: 1;*/
 	float: right;
-	/*padding: 40px;*/
 	margin-left: -10%;
 
 }
@@ -109,7 +107,6 @@ select:focus {
 
 .notificationMessage{
   width: 100%;
-  /*margin-bottom: 0px;*/
   display: block;
   text-shadow: 0.5px 0.5px black;
   text-align: center;
@@ -119,11 +116,7 @@ select:focus {
     left:0;
     width:100%;
   border-left: 4px solid;
-  /*right: -50px;*/
-  /*opacity: 0;*/
-  /*  line-height: 1;*/
   padding: 0;
-  /*transition: right 400ms, opacity 400ms, line-height 300ms 100ms, padding 300ms 100ms;*/
   display: table;
 }
 
@@ -136,4 +129,8 @@ select:focus {
   color: black;
   border-color: black;
   background-color: #f7931d;
+}
+#helloUsername{
+	float: right;
+	color: blue;
 }

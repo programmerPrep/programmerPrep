@@ -8,13 +8,15 @@ body, html {
 	height: 100vh;
 	width: 100vw;
 	background-image: url('/img/notebookPaper.jpeg');
-	background-image: cover;
-	background-repeat: repeat-y;
+	background-size: cover;
+	background-repeat: repeat;
+	position: center;
 	margin: 0 -160px;
 	padding: 0 160px;
-
 	overflow: scroll;
-
+	position: fixed;
+	 top: 0;
+	 left: 0;
 }
 
 .statusPic{
@@ -72,9 +74,11 @@ body, html {
 .note .author {
   display: block;
   /*margin: 40px 0 0 0;*/
-  
   text-align: center;
+}
 
+.author{
+	margin-top: -14px
 }
 
 .yellow {
@@ -84,6 +88,7 @@ body, html {
   -o-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
   transform: rotate(2deg);
+  margin: 10%;
 }
 
 .addIcon{
@@ -104,3 +109,9 @@ body, html {
 	z-index: 1000;
 }
 
+
+#pending, #active{
+	color: red;
+	font-size: 2rem;
+	float: left;
+}

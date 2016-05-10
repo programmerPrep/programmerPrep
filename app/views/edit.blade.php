@@ -1,9 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <main>
-
 <body id="dashboardBODY">
-
 	@include ('partials.navbar')
 		<div class="CavortingEdit"> Edit Your Profile </div>
 		
@@ -37,6 +35,7 @@
 						{{ $errors->first('img_url', '<span class="help-block">:message</span>') }}
 						{{ Form::submit('Sign in', array('class' => 'button')); }}
 					</div>
+
 				</div>
 			</div>				
 		{{ Form::close() }}

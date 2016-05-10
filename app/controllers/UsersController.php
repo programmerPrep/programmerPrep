@@ -79,7 +79,8 @@ class UsersController extends \BaseController {
 		$content = $this->get_repos();
 		$content = $content->items[0];
 		
-		return array($user, $content);
+		return View::make('profile')->with(array('user' => $user, 'content' => $content));
+		// return array($user, $content);
 
 		// $relationship = Relationship::where('user_id', '=', $user->id)->get();
 
@@ -102,6 +103,7 @@ class UsersController extends \BaseController {
 		$user->username = Input::get('username');
 		$user->password = Input::get('password');
 		$user->email    = Input::get('email');
+        $user->is_mentor = Input::get('is_mentor');
 		$user->save();
 
 
@@ -223,7 +225,7 @@ class UsersController extends \BaseController {
         $search = Input::get('search');
 
         if (is_null($search)) {
-            $mentors = DB::table('users')->where('is_mentor', 1)->orderBy('created_at', 'desc')->get();
+            $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'NOT LIKE', null)->orderBy('created_at', 'desc')->get();
         } else {
             $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
         }
@@ -252,5 +254,29 @@ class UsersController extends \BaseController {
 
     	return Redirect::action('DashboardController@show', Auth::id());
 
+    }
+
+
+    public function acceptRequest($studentId)
+    {
+    	// needs validation
+
+    	$relationship = DB::table('relationships')->where('mentor_id', Auth::id())->where('student_id', $studentId)->get();
+
+    	// dd($relationship[0]);
+
+    	if ($relationship[0]->is_pending != 1) {
+    		Session::flash('errorMessage', 'This request does not exist.');
+    		return Redirect::back();
+
+    	}
+
+    	$relationship = Relationship::find($relationship[0]->id);
+
+    	$relationship->is_pending = 0;
+
+    	$relationship->save();
+
+    	return Redirect::action('DashboardController@show', Auth::id());
     }
 }
