@@ -31,6 +31,8 @@ Route::get('/users/mentorRequest/{mentorId}', 'UsersController@mentorRequest');
 
 Route::get('/users/acceptRequest/{studentId}', 'UsersController@acceptRequest');
 
+Route::get('/users/rejectRequest/{studentId}', 'UsersController@rejectRequest');
+
 
 	// Test route
 // Route::get('/testrelations/{id}', 'DashboardController@show');

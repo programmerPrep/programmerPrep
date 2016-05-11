@@ -9,9 +9,9 @@
 	
 	<div class="CavortingTitle">Mentor Index</div>
 	<div class="container">
-		<div class="row">
+		<div class="`">
 				@foreach ($mentors as $mentor)
-					<div class="six columns">
+					<div class="five columns">
 						<?php $interestsArray = explode(',' , $mentor->interests);?>
 						<div class="note yellow">
 						<a href="#" class="button button-primary floatLeft"> <img class="addIcon" src="/icons/glyphicons/png/glyphicons-191-plus-sign.png" alt="Add Mentor!"> Test</a>

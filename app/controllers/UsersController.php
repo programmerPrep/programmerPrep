@@ -279,4 +279,26 @@ class UsersController extends \BaseController {
 
     	return Redirect::action('DashboardController@show', Auth::id());
     }
+
+
+    public function rejectRequest($studentId)
+    {
+    	// needs validation
+
+    	$relationship = DB::table('relationships')->where('mentor_id', Auth::id())->where('student_id', $studentId)->get();
+
+    	// dd($relationship[0]);
+
+    	if ($relationship[0]->is_pending != 1) {
+    		Session::flash('errorMessage', 'This request does not exist.');
+    		return Redirect::back();
+
+    	}
+
+    	$relationship = Relationship::find($relationship[0]->id);
+
+    	$relationship->delete();
+
+    	return Redirect::action('DashboardController@show', Auth::id());
+    }
 }
