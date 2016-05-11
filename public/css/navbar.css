@@ -17,7 +17,7 @@
 .navbarStyle{
     margin-left: 0;
     margin-right: 10px;
-    width: 150px;
+    width: 10%;
     height: 74vh;
     text-align: center;
     position: fixed;
@@ -35,7 +35,7 @@
 }
 
 .searchStyle{
-    width: 150px;
+    width: 50%;
     height: 74vh;
     /*margin-top: 115px;*/
     position: fixed;
