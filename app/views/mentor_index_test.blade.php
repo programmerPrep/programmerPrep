@@ -14,7 +14,9 @@
 					<div class="six columns">
 						<?php $interestsArray = explode(',' , $mentor->interests);?>
 						<div class="note yellow">
-						<a href="#" class="button button-primary floatLeft"> <img class="addIcon" src="/icons/glyphicons/png/glyphicons-191-plus-sign.png" alt="Add Mentor!"> Test</a>
+						<a href="{{{ action('UsersController@mentorRequest', $mentor->id) }}}" target="_top">
+							<img class="" src="/icons/add1.svg" height="15" width="15" alt="Add Mentor!">
+						</a>
             				{{ HTML::image($mentor->img_url, $mentor->first_name, array('class' => 'statusPic')) }}
             				<div class="quote-container">
                 				{{{ $interestsArray[0] }}}, {{{ $interestsArray[1] }}}, {{{ $interestsArray[2] }}}...
