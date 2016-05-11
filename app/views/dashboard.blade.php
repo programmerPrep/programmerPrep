@@ -15,7 +15,7 @@
 					<div class="note yellow">
 						<div class="align-left">
 							<a href="{{{action('UsersController@acceptRequest', $user->id)}}}">
-								<img src="/icons/glyphicons/png/glyphicons-191-plus-sign.png">
+								<img src="/icons/	.png">
 							</a>
 							<div id="pending">Pending</div>
 						</div>

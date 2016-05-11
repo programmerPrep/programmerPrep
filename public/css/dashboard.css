@@ -94,15 +94,14 @@ body, html {
 .addIcon{
     height: 25px;
     width: 25px;
-    float: left;
+    margin: 1%;
 }
 
 .subIcon{
-	background-image: url('/icons/glyphicons/png/glyphicons-193-remove-sign.png');
 	height: 18px;
 	width: 18px;
 	float: left;
-	margin: 5px;
+	margin: 1%;
 }
 
 .floatLeft{
