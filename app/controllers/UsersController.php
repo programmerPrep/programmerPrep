@@ -103,7 +103,11 @@ class UsersController extends \BaseController {
 		$user->username = Input::get('username');
 		$user->password = Input::get('password');
 		$user->email    = Input::get('email');
-        $user->is_mentor = Input::get('is_mentor');
+		if (Input::has('is_mentor')) {
+			$user->is_mentor = Input::get('is_mentor');	
+		} else {
+			$user->is_mentor = 0;
+		}
 		$user->save();
 
 
@@ -243,6 +247,9 @@ class UsersController extends \BaseController {
     		Session::flash('errorMessage', 'Already requested this mentor.');
     		return Redirect::back();
 
+    	} elseif (Auth::user()->is_mentor == 1) {
+    		Session::flash('errorMessage', 'You cannot request a mentor.');
+    		return Redirect::back();
     	}
 
 
@@ -277,6 +284,28 @@ class UsersController extends \BaseController {
     	$relationship->is_pending = 0;
 
     	$relationship->save();
+
+    	return Redirect::action('DashboardController@show', Auth::id());
+    }
+
+
+    public function deleteRelationship($studentId)
+    {
+    	// needs validation
+
+    	$relationship = DB::table('relationships')->where('mentor_id', Auth::id())->where('student_id', $studentId)->get();
+
+    	// dd($relationship[0]);
+
+    	if (!$relationship) {
+    		Session::flash('errorMessage', 'This relationship does not exist.');
+    		return Redirect::back();
+
+    	}
+
+    	$relationship = Relationship::find($relationship[0]->id);
+
+    	$relationship->delete();
 
     	return Redirect::action('DashboardController@show', Auth::id());
     }

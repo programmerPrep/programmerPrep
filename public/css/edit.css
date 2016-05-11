@@ -1,7 +1,10 @@
 .loginStyle{
 	height: auto;
-	width: 70%;
+	width: 64%;
 	background: rgba(0,0,0,0.2);
+	border: solid black 3px;
+	border-radius: ;
+
 }
 
 .formMarginAdjust{
