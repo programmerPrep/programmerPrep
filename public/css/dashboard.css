@@ -130,7 +130,7 @@ body, html {
 	margin: 1%;
 }
 
-.nameDate{
+.nameDa2e{
 	float: right;
 	text-align: right;
 	font-family: Yunus;
@@ -141,4 +141,11 @@ body, html {
 }
 #spanID{
 	text-decoration: none;
+}
+
+.requestButton{
+	margin-top: -12px;
+}
+.profileButton{
+	margin-bottom: -12px;
 }

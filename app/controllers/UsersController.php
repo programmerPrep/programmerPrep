@@ -103,7 +103,11 @@ class UsersController extends \BaseController {
 		$user->username = Input::get('username');
 		$user->password = Input::get('password');
 		$user->email    = Input::get('email');
-        $user->is_mentor = Input::get('is_mentor');
+		if (Input::has('is_mentor')) {
+			$user->is_mentor = Input::get('is_mentor');	
+		} else {
+			$user->is_mentor = 0;
+		}
 		$user->save();
 
 

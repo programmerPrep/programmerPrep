@@ -28,7 +28,7 @@
 				{{ Form::text('github', null, array('class' => 'form-control', 'placeholder' => 'github username', 'id' => 'githubUsername')) }}
 				<br>
 				{{-- <input type="checkbox" name="isMentor" value="isMentor" id="isMentorCheckbox"> I am a Mentor --}}
-				{{ Form::checkbox('is_mentor', '1', false, array('class' => 'form-control', 'id' => 'is_mentor')) }} I am a Mentor
+				{{ Form::checkbox('is_mentor', '1', 0, array('class' => 'form-control', 'id' => 'is_mentor')) }} I am a Mentor
 				<br>
 			</div>
 			<div class="loginFormButtons">
