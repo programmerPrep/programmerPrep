@@ -2,7 +2,6 @@
 @section('content')
 @include ('partials.navbar')
 
-
 <div id="dashboardBODY">
 	
 	@include ('partials.navbar')
