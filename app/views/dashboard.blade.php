@@ -13,9 +13,11 @@
 					<?php $interestsArray = explode(',', $user->interests); ?>
 					<div class="note yellow">
 						<div class="align-left">
-							<a href="{{{action('UsersController@acceptRequest', $user->id)}}}">
-								<img class="plusIcon" src="/icons/glyphicons/png/glyphicons-191-plus-sign.png">
-							</a>
+							@if (Auth::user()->is_mentor == 1)
+								<a href="{{{action('UsersController@acceptRequest', $user->id)}}}">
+									<img class="plusIcon" src="/icons/glyphicons/png/glyphicons-191-plus-sign.png">
+								</a>
+							@endif
 							<div id="pending">Pending</div>
 						</div>
 	    				{{ HTML::image($user->img_url, $user->first_name, array('class' => 'statusPic')) }}
@@ -34,9 +36,12 @@
 					<?php $interestsArray = explode(',', $user->interests); ?>
 					<div class="note yellow">
 						<div class="align-left">
-							<a href="{{{action('UsersController@show', $user->id)}}}">
-								<img src="/icons/glyphicons/png/glyphicons-193-remove-sign.png">
-							</a>
+							@if (Auth::user()->is_mentor == 1)
+                				<a href="{{{action('UsersController@deleteRelationship', $user->id)}}}">
+									<img src="/icons/glyphicons/png/glyphicons-193-remove-sign.png">
+								</a>
+                			@endif
+
 							<div id="active">Active</div>
 						</div>
 	    				{{ HTML::image($user->img_url, $user->first_name, array('class' => 'statusPic')) }}
