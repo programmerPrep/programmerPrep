@@ -212,20 +212,6 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user = new User();
-        $user->username = 'kbryant9';
-        $user->first_name = 'Karen';
-        $user->last_name = 'Bryant';
-        $user->email = 'kbryant9@unicef.org';
-        $user->interests = 'Scheme, JavaScript, MySQL';
-        $user->password = 'logan';
-        $user->img_url = '/img/10.jpg';
-        $user->is_mentor = 1;
-        $user->bio = 'As fast as thou shalt wane, so fast thou grow\'st';
-        $user->github_name = 'kbryant9';
-        $user->confirmed = 1;
-        $user->save();
-
-        $user = new User();
         $user->username = 'prossa';
         $user->first_name = 'Pamela';
         $user->last_name = 'Ross';
