@@ -242,6 +242,9 @@ class UsersController extends \BaseController {
     		Session::flash('errorMessage', 'Already requested this mentor.');
     		return Redirect::back();
 
+    	} elseif (Auth::user()->is_mentor == 1) {
+    		Session::flash('errorMessage', 'You cannot request a mentor.');
+    		return Redirect::back();
     	}
 
 
@@ -281,7 +284,7 @@ class UsersController extends \BaseController {
     }
 
 
-    public function rejectRequest($studentId)
+    public function deleteRelationship($studentId)
     {
     	// needs validation
 
@@ -289,8 +292,8 @@ class UsersController extends \BaseController {
 
     	// dd($relationship[0]);
 
-    	if ($relationship[0]->is_pending != 1) {
-    		Session::flash('errorMessage', 'This request does not exist.');
+    	if (!$relationship) {
+    		Session::flash('errorMessage', 'This relationship does not exist.');
     		return Redirect::back();
 
     	}

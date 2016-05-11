@@ -139,3 +139,6 @@ body, html {
 .plusIcon{
 	zoom: 90%;	
 }
+#spanID{
+	text-decoration: none;
+}

@@ -31,7 +31,7 @@ Route::get('/users/mentorRequest/{mentorId}', 'UsersController@mentorRequest');
 
 Route::get('/users/acceptRequest/{studentId}', 'UsersController@acceptRequest');
 
-Route::get('/users/rejectRequest/{studentId}', 'UsersController@rejectRequest');
+Route::get('/users/deleteRelationship/{studentId}', 'UsersController@deleteRelationship');
 
 
 	// Test route
