@@ -1,9 +1,12 @@
 @extends('layouts.master')
 @section('content')
 @include ('partials.navbar')
+
+<?php $updatedArray = explode(' ' , $user->updated_at);?>
+
 <div id="dashboardBODY">
 	<div class="CavortingTitle">{{ $user->first_name }}'s Profile</div>
-		<div class="nameDate">{{ $user->first_name}} {{ $user->last_name }} <br> {{ $user->github_name }} <br> {{ $user->updated_at }}</div>
+		<div class="nameDate">{{ $user->first_name}} {{ $user->last_name }} <br> {{ $user->github_name }} <br> {{ $updatedArray[0] }}</div>
 
 	<div class="container profileBody">
 

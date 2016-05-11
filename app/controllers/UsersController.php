@@ -230,7 +230,8 @@ class UsersController extends \BaseController {
             $mentors = DB::table('users')->where('is_mentor', 1)->where('interests', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
         }
 
-        return View::make('mentor_index_test')->with('mentors', $mentors);
+        $user = Auth::user();
+        return View::make('mentor_index_test')->with('mentors', $mentors)->with('user', $user);
     }
 
 
