@@ -1,7 +1,8 @@
 @extends('layouts.master')
 @section('content')
+<div class="two columns">
 @include ('partials.navbar')
-
+</div>
 <div id="dashboardBODY">
 	
 	@include ('partials.navbar')
